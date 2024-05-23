@@ -1,0 +1,53 @@
+ contatos, setores, unidades, usuarios });
+    })
+    .catch(error => {
+      console.error("Erro ao carregar detalhes da instituição:", error);
+    });
+  };
+  
+  
+
+  const handleInstituicaoSelection = (index) => {
+    const instituicaoSelecionada = instituicoes[index];
+    setSelectedInstituicao(instituicaoSelecionada);
+    carregarDetalhesInstituicao(instituicaoSelecionada.id);
+  };
+// Função para renderizar a tabela de detalhes da instituição
+  const renderInstituicaoDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.instituicoes) return null;
+  
+    const instituicaoDetails = detalhesInstituicao.instituicoes[0];
+  
+    return (
+      <Table responsive bordered className="institution-details-table mb-4">
+        <tbody>
+          <tr>
+            <td className="detail-cell">Instituição</td>
+            <td className="detail-cell">{instituicaoDetails.instituicao}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">CNPJ</td>
+            <td className="detail-cell">{instituicaoDetails.cnpj}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Inscrição Estadual</td>
+            <td className="detail-cell">{instituicaoDetails.inscricaoEstadual}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Razão Social</td>
+            <td className="detail-cell">{instituicaoDetails.razaoSocial}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Logradouro</td>
+            <td className="detail-cell">{instituicaoDetails.logradouro}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Número</td>
+            <td className="detail-cell">{instituicaoDetails.numero}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Complemento</td>
+            <td className="detail-cell">{instituicaoDetails.complemento}</td>
+          </tr>
+          <tr>
+            <td className="det

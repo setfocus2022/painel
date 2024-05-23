@@ -1,0 +1,74 @@
+cked + label::after {
+  color: #fff; }
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+  border-color: #d9534f; }
+
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de; }
+
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e; }
+
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c; }
+
+.checkbox-success input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.radio label::before,
+.radio label::after {
+  font-family: 'FontAwesome';
+  content: "\f10c";
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  position: absolute;
+  line-height: 19px;
+  left: 0;
+  top: 0;
+  color: #DDDDDD;
+  padding: 1px;
+  transition: color 0.2s linear; }
+
+.radio input[type="radio"]:checked + label::after {
+  font-family: 'FontAwesome';
+  content: "\f192";
+  color: #DDDDDD; }
+
+.radio input[type="radio"]:checked + label::after {
+  color: #1DC7EA; }
+
+.radio input[type="radio"]:disabled + label {
+  color: #ddd; }
+
+.radio input[type="radio"]:disabled + label::before,
+.radio input[type="radio"]:disabled + label::after {
+  color: #ddd; }
+
+.radio.radio-inline {
+  margin-top: 0; }
+
+/**
+  * bootstrap-switch - Turn checkboxes and radio buttons into toggle switches.
+  *
+  * @version v3.3.4
+  * @homepage https://bttstrp.github.io/bootstrap-switch
+  * @author Mattia Larentis <mattia@larentis.eu> (http://larentis.eu)
+  * @license Apache-2.0

@@ -1,0 +1,28 @@
+
+        component: NR4,
+        layout: "/admin",
+        roles: ['Dev'],
+      
+      },
+    ]
+  },
+  {
+    name: "Programas",
+    icon: "nc-icon nc-align-left-2",
+    layout: "/admin",
+    roles: ['Administrador', 'Dev'], 
+    subMenu: [
+      {
+        
+        path: "/TodosProgramas",
+        name: "Todos os Programas",
+        component: NR5,
+        layout: "/admin",
+        roles: ['Administrador', 'Dev'],
+      
+      },
+    ]
+  },
+];
+
+export default dashboardRoutes;

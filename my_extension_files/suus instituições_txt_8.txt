@@ -1,0 +1,38 @@
+{handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CNPJ*:</Form.Label>
+            <Col md={10}><Form.Control type="text" name="cnpj" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Inscrição Estadual*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="inscricaoestadual" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Razão Social*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="razaosocial" onChange={handleChange} required/></Col>
+            </Form.Group>
+            
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>ENDEREÇO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Logradouro*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="address" value={formData.address} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Número*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="number" value={formData.number} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Complemento:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="complement" value={formData.complement} onChange={handleChange} /></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Bairro*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="district" value={formData.district} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Gro

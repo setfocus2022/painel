@@ -1,0 +1,11 @@
+={styles.button}>Register</button>
+        </form>
+
+        <button onClick={handleDeleteUsers} className={styles.button}>Deletar todos os usuários</button>
+      </div>
+    </div>
+  );
+}
+
+export default Register;
+

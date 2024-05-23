@@ -1,0 +1,46 @@
+="rounded-pill search-input"
+            />
+            <FiSearch style={{
+              position: 'absolute',
+              top: '50%',
+              right: '10px',
+              transform: 'translateY(-50%)',
+              fontSize: '20px'
+            }} />
+          </div>
+        </Card.Body>
+      </Card>
+
+      <Card className="w-100 table-card">
+        <Card.Body className="p-0">
+          <div className="table-responsive">
+            <Table striped bordered hover className="m-0 table-users">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Usuário</th>
+                  <th></th> {/* Nova coluna adicionada */}
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredUsuarios.map(usuario => (
+                  <tr key={usuario.id}>
+                    <td>{usuario.name}</td>
+                    <td>{usuario.email}</td>
+                    <td>
+                      {usuario.access.includes('Visualizador') && (
+                        <img
+                          src="https://imgur.com/DBuYzVJ.png" alt="Visualizador" style={{ width: '24px', height: '24px', marginRight: '5px' }} title="Cliente"/>
+                          )}
+                      {usuario.access.includes('Admin') && (
+                        <img
+                          src="https://imgur.com/42Dk9YN.png" alt="Administrador" style={{ width: '24px', height: '24px', marginRight: '5px' }} title="Administrador"/>
+                          )}
+                      {usuario.access.includes('Médico') && (
+                        <img
+                          src="https://imgur.com/Pa2cWcB.png" alt="Medico" style={{ width: '24px', height: '24px', marginRight: '5px' }} title="Médico"/>
+                          )}
+                    </td>
+                    <td className="text-center">
+                      <Button variant="light" onCli

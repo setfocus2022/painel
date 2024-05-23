@@ -1,0 +1,64 @@
+--- FILENAME: Usuarios.js
+// Importação dos pacotes necessários
+import React, { useState, useEffect } from 'react';
+import { Table, Button, Card, Container, Form } from 'react-bootstrap';
+import { FiSearch } from 'react-icons/fi';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+import './suus.scss';
+
+// Componente principal
+const NR3 = () => {
+  // Declaração dos estados e outras variáveis
+  const [usuarios, setUsuarios] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const history = useHistory();
+
+  // Funções de interação com a API
+  useEffect(() => {
+    carregarUsuarios();
+  }, []);
+  
+  const carregarUsuarios = async () => {
+    try {
+        const response = await axios.get('https://fair-ruby-caterpillar-wig.cyclic.app/usuarios');
+        setUsuarios(response.data || []); // garanta que é um array
+    } catch (error) {
+        console.error("Error fetching users:", error);
+    }
+};
+
+  
+
+
+  // Funções de manipulação de eventos
+  const handleEdit = (id) => {
+    history.push(`${process.env.REACT_APP_API_URL}/edit/${id}`);
+  };
+
+  const handleRedirect = () => {
+    history.push('${process.env.REACT_APP_API_URL}/admin/NR2');
+  };
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  // Filtragem de usuários
+  const filteredUsuarios = (usuarios || []).filter(usuario => 
+    usuario.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    usuario.email.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Renderização do componente
+  return (
+    <Container fluid className="d-flex flex-column align-items-center">
+      <Card className="w-100 mb-3 search-card">
+        <Card.Body>
+          <div style={{ position: 'relative' }}>
+            <Form.Control
+              type="text"
+              placeholder="Pesquisar por nome ou email"
+              value={searchTerm}
+              onChange={handleSearch}
+              className

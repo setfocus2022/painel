@@ -1,0 +1,50 @@
+           />
+              <Form.Label>Cidade</Form.Label>
+              <Form.Control 
+                type="text" 
+                name="cidade" 
+                value={endereco.cidade}
+                onChange={handleChangeEndereco}
+              />
+              <Form.Label>Estado</Form.Label>
+              <Form.Control as="select" name="estado" value={endereco.estado} onChange={handleChange}>
+              {estadosBrasileiros.map((estado, index) => (
+                  <option key={index} value={estado.sigla}>
+                      {estado.nome}
+                  </option>
+              ))}
+              </Form.Control>
+
+
+              <Form.Label>Pais</Form.Label>
+              <Form.Control type="text" readOnly value="Brasil" />
+              <Form.Label>CEP</Form.Label>
+              <Form.Control
+                  type="text"
+                  name="cep"
+                  value={endereco.cep}
+                  onChange={handleCepChange}
+                  placeholder="Digite o CEP"
+              />
+            </Form.Group>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Header>CONTATOS</Card.Header>
+          <Card.Body>
+            {contatos.map((contato, index) => (
+              <div key={index} className="mb-4">
+                <Form.Group>
+                  <Form.Label>Categoria</Form.Label>
+                  <Form.Control
+                    as="select"
+                    name="categoria"
+                    onChange={(e) => handleChange(e, index)}
+                    value={contato.categoria}
+                  >
+                    <option value="" disabled>--SELECIONE--</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Técnico">Técnico</option>
+                    <option value="Cobrança">Cobrança</option>
+                    <option value="Especifique">Especifique...</option>
+                  </Form.Control>

@@ -1,0 +1,53 @@
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { Collapse } from 'react-bootstrap';
+import "./style.modules.css";
+
+function SubMenu({ icon, title, items, activeRoute, layout }) {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpen(items.some(item => isActive(item.path)));
+  }, [location]);
+
+  const isActive = (path) => {
+    return location.pathname.indexOf(path) > -1;
+  };
+
+  return (
+    <li className={open ? "active" : ""}>
+      <a
+        onClick={() => setOpen(!open)}
+        data-toggle="collapse"
+        aria-expanded={open}
+        className="nav-link"
+      >
+        <i className={icon} />
+        <p>{title}</p>
+      </a>
+      <Collapse in={open}>
+        <div>
+          <ul className="nav">
+            {items.map((item, key) => (
+              <li key={key} className={isActive(item.path) ? "active" : ""}>
+                <NavLink
+                  to={layout + item.path}
+                  className={`nav-link ${isActive(item.path) ? "active-submenu-item" : ""}`}
+                  activeClassName="active-submenu-item"
+                  style={isActive(item.path) ? { textDecoration: 'underline', fontWeight: 'bold' } : {}}
+                >
+                  <span className="sidebar-mini-icon">{item.short}</span>
+                  <span className="sidebar-normal">{item.name}</span>
+                </NavLink>
+
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Collapse>
+    </li>
+  );
+}
+
+export default SubMenu;

@@ -1,0 +1,87 @@
+ositions(newPositions);
+  }
+  
+  const handleImportChangeSectors = (e) => {
+    setImportPathSectors(e.target.value);
+  }
+  
+  const handleImportChangePositions = (e) => {
+    setImportPathPositions(e.target.value);
+  }
+  
+
+  const handleImportChange = (e) => {
+    setImportPath(e.target.value);
+  }
+  const [formData, setFormData] = useState({
+    instituicao: '',
+    cnpj: '',
+    inscricao_estadual: '',
+    razao_social: '',
+    logradouro: '',
+    numero: '',
+    complemento: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    cep: '',
+    contatos: [],
+    units: [],
+    sectors: [],
+    positions: [], // Adicionado
+    users: [],
+  });
+  
+
+  // Adicione uma nova unidade
+  const addUnit = () => {
+    setFormData(prevState => ({
+      ...prevState,
+      units: [...prevState.units, ''],
+    }));
+  };
+
+  // Remova uma unidade existente
+  const removeUnit = (indexToRemove) => {
+    setFormData(prevState => ({
+      ...prevState,
+      units: prevState.units.filter((_, index) => index !== indexToRemove),
+    }));
+  };
+
+  // Atualize uma unidade existente
+  const handleUnitChange = (e, index) => {
+    const { value } = e.target;
+
+    setFormData(prevState => {
+      const newUnits = [...prevState.units];
+      newUnits[index] = value;
+      return { ...prevState, units: newUnits };
+    });
+  };
+
+  const [categories, setCategories] = useState(["--SELECIONE--", "Administrativo", "Técnico", "Cobrança", "Especifique.."]);
+
+
+  const addContact = () => {
+    setFormData(prevState => ({
+      ...prevState,
+      contacts: [...prevState.contacts, { category: '', phone: '' }],
+    }));
+  };
+
+  
+  const handleContactChange = (e, index) => {
+    const { name, value } = e.target;
+    const newContacts = [...contacts];
+  
+    // Se não existe um objeto de contato neste índice, crie um
+    if (!newContacts[index]) {
+      newContacts[index] = {};
+    }
+
+    newContacts[index][name] = value;
+    setContacts(newContacts);
+
+    // Verificar se "--SELECIONE--" foi selecionado
+    

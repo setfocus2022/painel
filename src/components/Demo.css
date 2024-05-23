@@ -1,0 +1,28 @@
+.h6 {
+    text-align: center; /* Alinha o texto ao centro horizontalmente */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px 0; /* Espaçamento acima e abaixo para melhor visualização */
+  }
+  
+  .container-demo {
+    display: flex; /* Usa flexbox para alinhamento */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente no contêiner */
+    justify-content: center; /* Centraliza os itens verticalmente no contêiner */
+    height: 100vh; /* Altura total da janela de visualização */
+  }
+  
+  .button-demo {
+    font-weight: bold;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    background-color: #FF7F00;
+    color: white;
+    border: 4px solid #AA5400;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  

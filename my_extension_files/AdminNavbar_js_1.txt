@@ -1,0 +1,58 @@
+--- FILENAME: AdminNavbar.js
+import React, { useState, useEffect } from "react";
+import { useLocation, useHistory } from "react-router-dom";
+import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
+import routes from "routes.js";
+import axios from "axios";
+
+function Header() {
+  const location = useLocation();
+  const history = useHistory();
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const savedUsername = localStorage.getItem("username");
+    if (savedUsername) {
+      setUsername(savedUsername);
+    }
+  }, []);
+
+  const mobileSidebarToggle = (e) => {
+    e.preventDefault();
+    document.documentElement.classList.toggle("nav-open");
+    var node = document.createElement("div");
+    node.id = "bodyClick";
+    node.onclick = function () {
+      this.parentElement.removeChild(this);
+      document.documentElement.classList.toggle("nav-open");
+    };
+    document.body.appendChild(node);
+  };
+
+  const getBrandText = () => {
+    for (let i = 0; i < routes.length; i++) {
+      if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
+        return routes[i].name;
+      }
+    }
+    return "Brand";
+  };
+  
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('token'); 
+    localStorage.removeItem('instituicaoNome');
+    localStorage.removeItem('role');
+    localStorage.removeItem('birthDate');
+    localStorage.removeItem('cpf');
+    localStorage.removeItem('username'); // Remova o nome do usuário do localStorage
+    setUsername(""); // Limpe o estado do nome do usuário
+    history.push('/login'); // Redirecione o usuário para a página de login
+  };
+
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container fluid>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2">
+          <span className="navbar-toggler-bar burger-lines"></span>
+          <span className="navbar-toggler-bar burger-lines"></span

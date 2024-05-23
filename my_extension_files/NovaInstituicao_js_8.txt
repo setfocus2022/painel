@@ -1,0 +1,37 @@
+                        {contato.categoria === "Especifique" && (
+                                <div className="mt-2">
+                                    <Form.Label>Especifique a Categoria</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="categoriaEspecifica"
+                                        placeholder="Digite a categoria"
+                                        onChange={(e) => handleChange(e, 'contatos', index)}
+                                        value={contato.categoriaEspecifica}
+                                    />
+                                </div>
+                            )}
+                            <Form.Label className="mt-2">Nome Completo</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                name="nomeCompleto" 
+                                onChange={(e) => handleChange(e, 'contatos', index)} 
+                                value={contato.nomeCompleto} 
+                            />
+                            <Form.Label className="mt-2">Telefone</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                name="telefone" 
+                                onChange={(e) => handleChange(e, 'contatos', index)} 
+                                value={contato.telefone}
+                            />
+                        </Form.Group>
+                        {contatos.length > 1 && (
+                            <Button 
+                                variant="danger" 
+                                onClick={() => handleRemoveContato(index)}
+                                className="mb-2"
+                            >
+                                Remover
+                            </Button>
+                        )}
+          

@@ -1,0 +1,160 @@
+/* PainelUsuario.css */
+
+.card-programa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Mantém espaçamento interno consistente */
+  width: 280px; /* Largura fixa para cada card */
+  min-height: 400px; /* Altura mínima para cada card */
+  margin: 0 15px 20px; /* Ajusta margem para centralizar e dar espaçamento vertical */
+}
+.user-profile-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards na linha */
+}
+
+.card-programa {
+  /* Ajustes para garantir que os cards estejam visualmente consistentes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem; /* Bordas arredondadas */
+}
+
+/* PainelUsuario.css */
+.originals {
+  background-color: #15283E;
+
+  width: auto;
+  height: auto;
+  margin-top: -40px;
+}
+.originals h2 {
+  color: #f1f1f1;
+}
+
+
+.card-programa .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Faz o conteúdo do card ocupar todo o espaço disponível */
+}
+
+.card-programa img {
+  width: auto; /* Assegura que a imagem cubra toda a largura do card */
+  height: auto; /* Altura fixa para a imagem */
+  object-fit: cover; /* Faz com que a imagem preencha o espaço disponível sem distorcer */
+}
+
+.card-programa .card-title {
+  font-size: 16px; /* Tamanho do título */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.card-programa .card-text-container {
+  flex-grow: 1; /* Faz a descrição ocupar todo o espaço vertical disponível */
+  overflow-y: auto; /* Mostra a barra de rolagem vertical se necessário */
+  margin: 0 10px 15px 10px; /* Margens ao redor da descrição */
+  height: 100px; /* Altura fixa para a descrição */
+  font-size: 11pt;
+}
+
+/* Estiliza a barra de rolagem (apenas para Webkit browsers) */
+.card-programa .card-text-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-programa .card-text-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.card-programa .card-text-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.card-programa .card-text-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.img-catalogo {
+  width: 100%;
+}
+
+.card-programa .courseButton  {
+  width: calc(100% - 20px); /* Faz o botão ocupar toda a largura do card menos o padding */
+  margin: 10px; /* Espaçamento ao redor do botão */
+  background-color: #15283E; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+.kctdbutton  {
+  width: 50%; /* Faz o botão ocupar toda a largura do card menos o padding */
+  margin: 10px; /* Espaçamento ao redor do botão */
+  background-color: #15283E; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  background-color: #F7F7F8;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('search.png'); /* Adicione o caminho correto da sua imagem */
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* PainelUsuario.css */
+
+@media (max-width: 768px) {
+  .user-profile-row .card-programa {
+    width: 90%; /* Faz o card ocupar a maior parte da tela */
+    margin: 10px auto; /* Adiciona margem acima e abaixo, centraliza horizontalmente */
+  }
+
+  .user-profile-row {
+    justify-content: center; /* Centraliza os cards horizontalmente */
+  }
+
+  .profile-course-card img {
+    height: auto; /* Altura automática para manter a proporção da imagem */
+  }
+}
+
+  /* Estilos adicionais para melhorar a aparência em dispositivos móveis */
+  /* ... */

@@ -1,0 +1,62 @@
+ 'Paraíba',
+    'Paraná',
+    'Pernambuco',
+    'Piauí',
+    'Rio de Janeiro',
+    'Rio Grande do Norte',
+    'Rio Grande do Sul',
+    'Rondônia',
+    'Roraima',
+    'Santa Catarina',
+    'São Paulo',
+    'Sergipe',
+    'Tocantins',
+  ];
+
+  // Adicione este estado para gerenciar a notificação
+  const [notification, setNotification] = useState(null);
+  
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Impede o comportamento padrão de recarregar a página
+
+    // Envia os dados para o servidor
+    axios.post('https://fair-ruby-caterpillar-wig.cyclic.app/register', formData)
+      .then(response => {
+        console.log(response.data); 
+        setNotification({
+          type: 'success',
+          message: 'Sucesso ao cadastrar Novo Usuário',
+        });
+  
+      })
+      .catch(error => {
+        console.log(error); 
+        setNotification({
+          type: 'danger',
+          message: 'Falha ao cadastrar Novo Usuário',
+        });
+      });
+  };
+
+
+  return (
+    <Container>
+      <h2 style={{ fontSize: "27px", fontWeight: "bold", marginBottom: "20px" }}>Cadastro de Novos Usuários</h2>
+      <Form onSubmit={handleSubmit}> 
+        <Card>
+          <Card.Header>IDENTIFICAÇÃO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Nome*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="name" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Sobrenome*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="surname" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>E-mail de acesso*:</Form.Label>
+              <Col md={10}><Form.Control type="email" name="email" onChange={handleChange} required/></Col>
+            </Form.Group>

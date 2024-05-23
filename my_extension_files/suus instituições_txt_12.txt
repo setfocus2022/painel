@@ -1,0 +1,63 @@
+    </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeSector(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+         
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>
+          CARGOS
+          <span style={{ cursor: 'pointer', float: 'right' }} onClick={addPosition}>ADICIONAR</span>
+        </Card.Header>
+        <Card.Body>
+          {positions.map((position, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Cargo:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    value={position}
+                    onChange={(e) => handlePositionChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removePosition(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+        
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>
+          USUÁRIOS
+          <span style={{ cursor: 'pointer', float: 'right', marginLeft: '25px' }} onClick={addUser}>ADICIONAR</span>
+          
+
+        </Card.Header>
+        <Card.Body>
+          {users.map((user, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Nome:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="name"
+                    value={user.name}
+                    onChange

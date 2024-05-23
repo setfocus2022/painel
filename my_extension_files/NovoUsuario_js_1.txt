@@ -1,0 +1,87 @@
+--- FILENAME: NovoUsuario.js
+import React, { useState } from 'react';
+import { Form, Button, Card, Container, Col, Row, Alert  } from 'react-bootstrap';
+import axios from 'axios';
+import './NovosUsuarios.scss';
+
+const NRs = () => {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    birthDate: '',
+    gender: '',
+    phone: '',
+    phone2: '',
+    cpf: '',
+    cnpj: '',
+    registration: '',
+    obs: '',
+    address: '',
+    number: '',
+    complement: '',
+    district: '',
+    city: '',
+    state: '',
+    country: 'Brasil',
+    zipCode: '',
+    unit: '',
+    sector: '',
+    role: '',
+    institution: localStorage.getItem('instituicaoNome'),
+    accessRecovery: false,
+    access: 'Visualizador',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+    if (name === 'zipCode') {
+      const cep = value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => {
+            const { logradouro, bairro, localidade, uf } = response.data;
+            setFormData(prevState => ({
+              ...prevState,
+              address: logradouro,
+              district: bairro,
+              city: localidade,
+              state: uf,
+            }));
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
+    }
+  };
+
+  const handleCheckChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+
+  const estados = [
+    'Acre',
+    'Alagoas',
+    'Amapá',
+    'Amazonas',
+    'Bahia',
+    'Ceará',
+    'Distrito Federal',
+    'Espírito Santo',
+    'Goiás',
+    'Maranhão',
+    'Mato Grosso',
+    'Mato Grosso do Sul',
+    'Minas Gerais',
+    'Pará',
+   

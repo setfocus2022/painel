@@ -1,0 +1,56 @@
+               <td className="detail-cell">{contato.categoria}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">  Categoria Específica</td>
+                <td className="detail-cell">{contato.categoriaEspecifica}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Nome Completo</td>
+                <td className="detail-cell">{contato.nomeCompleto}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Telefone</td>
+                <td className="detail-cell">{contato.telefone}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Instituição</td>
+                <td className="detail-cell">{contato.instituicaoNome}</td>
+              </tr>
+            </React.Fragment>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+  
+  const renderSetoresDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.setores) return null;
+  
+    return (
+      <Table responsive bordered className="setores-details-table mb-4">
+        <tbody>
+          {detalhesInstituicao.setores.map((setor, index) => (
+            <React.Fragment key={index}>
+              <tr>
+                <td className="detail-cell">Setor</td>
+                <td className="detail-cell">{setor.setor}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Instituição</td>
+                <td className="detail-cell">{setor.instituicaoNome}</td>
+              </tr>
+            </React.Fragment>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+  
+  const renderUnidadesDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.unidades) return null;
+  
+    return (
+      <Table responsive bordered className="unidades-details-table mb-4">
+        <tbody>
+          {detalhesInstituicao.unidades.map((unidade, index) => (
+            <React.Fragment ke

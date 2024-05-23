@@ -1,0 +1,96 @@
+/* Contact.css */
+.contact-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2em;
+  background-color: #15283E; /* Cor com transparência */
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.contact-info p {
+  margin-bottom: 0.5em;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.gps-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.map-container {
+  height: 400px;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-info,
+  .gps-container {
+    margin: 0 0 50px 0;
+  }
+}
+.map-wrapper {
+  height: 400px;
+  max-width: 600px;
+  opacity: 0; /* Inicialmente, o mapa estará invisível */
+  animation: fade-in-left 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.map-container {
+  max-width: 750px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .map-wrapper {
+    margin-top: 0; /* Remover espaçamento acima do mapa em telas menores */
+  }
+
+  .social-links {
+    justify-content: center; /* Centralizar ícones das redes sociais em telas menores */
+  }
+}

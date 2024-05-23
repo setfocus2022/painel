@@ -1,0 +1,498 @@
+[
+    {
+        "imageSrc": "https://imgur.com/G1j7xWR.png",
+        "valor": "R$ 109,90",
+        "titulo": "5S - Ferramentas da Qualidade - Cont\u00ednuo",
+        "carga_horaria": "2h",
+        "id": 1,
+        "descricao": "O curso aborda como garantir uma gest\u00e3o de qualidade por meio da metodologia 5S. Um m\u00e9todo r\u00e1pido, econ\u00f4mico, eficaz e mundialmente utilizado em organiza\u00e7\u00f5es. Neste curso, o aluno ser\u00e1 capacitado a aplicar a metodologia dentro da empresa onde atua e no dia a dia da sua vida."
+    },
+    {
+        "imageSrc": "https://imgur.com/bU6rYVh.png",
+        "valor": "R$ 119,90",
+        "titulo": "An\u00e1lise de Riscos",
+        "carga_horaria": "12h",
+        "id": 2,
+        "descricao": "Este curso tem como finalidade apresentar conceitos b\u00e1sicos da An\u00e1lise de Riscos, assim como as metodologias existentes e as etapas de execu\u00e7\u00e3o para sua aplica\u00e7\u00e3o."
+    },
+    {
+        "imageSrc": "https://imgur.com/n7KEBqF.png",
+        "valor": "R$ 129,90",
+        "titulo": "Atendimento Pr\u00e9 Hospitalar (Primeiros Socorros) B\u00e1sico",
+        "carga_horaria": "9h",
+        "id": 3,
+        "descricao": "Capacitar o aluno na realiza\u00e7\u00e3o de a\u00e7\u00f5es emergenciais em caso de acidentes industriais ou dom\u00e9sticos. Embora o conte\u00fado do curso esteja aberto a todos os interessados em ingressar nesta \u00e1rea, alunos com experi\u00eancia anterior em \u00e1reas afins ter\u00e3o melhor aproveitamento devido \u00e0 sua realidade profissional."
+    },
+    {
+        "imageSrc": "https://imgur.com/mmOKX3U.png",
+        "valor": "R$ 189,90",
+        "titulo": "Atendimento Pr\u00e9 Hospitalar (Primeiros Socorros) Intermedi\u00e1rio",
+        "carga_horaria": "18h",
+        "id": 4,
+        "descricao": "Capacitar o aluno na realiza\u00e7\u00e3o de a\u00e7\u00f5es emergenciais em caso de acidentes industriais ou dom\u00e9sticos. Embora o conte\u00fado do curso esteja aberto a todos os interessados em ingressar nesta \u00e1rea, alunos com experi\u00eancia anterior em \u00e1reas afins ter\u00e3o melhor aproveitamento devido \u00e0 sua realidade profissional."
+    },
+    {
+        "imageSrc": "https://imgur.com/vLPvY16.png",
+        "valor": "R$ 109,90",
+        "titulo": "Avalia\u00e7\u00e3o Geral de Cena",
+        "carga_horaria": "1h",
+        "id": 5,
+        "descricao": "Este curso tem como objetivos torn\u00e1-lo apto a realizar a avalia\u00e7\u00e3o geral do paciente; diferenciar Avalia\u00e7\u00e3o Dirigida para trauma de Avalia\u00e7\u00e3o dirigida para emerg\u00eancia m\u00e9dica; aferir sinais vitais."
+    },
+    {
+        "imageSrc": "https://imgur.com/a7ngF0v.png",
+        "valor": "R$ 159,90",
+        "titulo": "Dire\u00e7\u00e3o Defensiva para Motoristas de Caminh\u00e3o",
+        "carga_horaria": "4h",
+        "id": 6,
+        "descricao": "Este curso t\u00eam como objetivo capacitar os motoristas profissionais para a condu\u00e7\u00e3o de ve\u00edculos de forma preventiva, evitar comportamentos inadequado durante a condu\u00e7\u00e3o e evitar acidentes de tr\u00e2nsito."
+    },
+    {
+        "imageSrc": "https://imgur.com/aclFUNx.png",
+        "valor": "R$ 159,90",
+        "titulo": "Dire\u00e7\u00e3o Preventiva para Frotistas",
+        "carga_horaria": "4h",
+        "id": 7,
+        "descricao": "Este curso t\u00eam como objetivo capacitar os motoristas profissionais para a condu\u00e7\u00e3o de ve\u00edculos de forma preventiva, evitar comportamentos inadequado durante a condu\u00e7\u00e3o e evitar acidentes de tr\u00e2nsito."
+    },
+    {
+        "imageSrc": "https://imgur.com/gmNDbxO.png",
+        "valor": "R$ 109,90",
+        "titulo": "Lei Geral de Prote\u00e7\u00e3o de Dados - LGPD",
+        "carga_horaria": "2h",
+        "id": 8,
+        "descricao": "O conceito geral da LGPD e a import\u00e2ncia de existir uma Lei para prote\u00e7\u00e3o de dados, para as pessoas e organiza\u00e7\u00f5es; O conceito de dados pessoais; Definir agentes e pap\u00e9is na LGPD; Exercer boas pr\u00e1ticas no tratamento e governan\u00e7a de dados pessoais; Cumprir as exig\u00eancias legais da LGPD. "
+    },
+    {
+        "imageSrc": "https://imgur.com/Bx9Ch1Z.png",
+        "valor": "R$ 129,90",
+        "titulo": "LOTO - Guia Pr\u00e1tico",
+        "carga_horaria": "10h",
+        "id": 9,
+        "descricao": "Este treinamento tem como objetivo capacitar os colaboradores para identificar e utilizar dispositivos de bloqueio para energias perigosas garantindo a manuten\u00e7\u00e3o segura e eficiente de equipamentos."
+    },
+    {
+        "imageSrc": "https://imgur.com/py1Zdom.png",
+        "valor": "R$ 109,90",
+        "titulo": "No\u00e7\u00f5es B\u00e1sicas de Anatomia",
+        "carga_horaria": "1h",
+        "id": 10,
+        "descricao": "Este curso tem como objetivos: identificar e localizar os \u00f3rg\u00e3os no corpo humano; conhecer os sistemas corporais; reportar les\u00f5es utilizando linguagem correta."
+    },
+    {
+        "imageSrc": "https://imgur.com/itOBg0m.png",
+        "valor": "109,90",
+        "titulo": "NR1 - Disposi\u00e7\u00f5es Gerais",
+        "carga_horaria": "1h",
+        "id": 11,
+        "descricao": "O curso aborda os aspectos gerais da NR1. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de identificar onde as NRs se aplicam e quem s\u00e3o os respons\u00e1veis pelo seu cumprimento."
+    },
+    {
+        "imageSrc": "https://imgur.com/hmnqDbl.png",
+        "valor": "189,90",
+        "titulo": "NR10 - Seguran\u00e7a El\u00e9trica (Reciclagem)",
+        "carga_horaria": "20h",
+        "id": 12,
+        "descricao": "O treinamento NR-10 de Seguran\u00e7a El\u00e9trica \u00e9 obrigat\u00f3rio para pessoas que trabalhem em instala\u00e7\u00f5es el\u00e9tricas e/ou realizem servi\u00e7os que envolvam eletricidade. Desenvolvido em parceria com uma s\u00f3lida empresa de engenharia el\u00e9trica e automa\u00e7\u00e3o industrial - a GreyLogix, garantimos um material completo e atualizado, al\u00e9m de tutores altamente qualificados e com experi\u00eancia pr\u00e1tica. Uma solu\u00e7\u00e3o inovadora para certifica\u00e7\u00e3o profissional com uma metodologia que facilita e potencializa o processo de aprendizagem, gerando economia de tempo e dinheiro."
+    },
+    {
+        "imageSrc": "https://imgur.com/iG7OwF7.png",
+        "valor": "R$ 199,90",
+        "titulo": "NR10 - SEP (Sistema El\u00e9trico de Pot\u00eancia)",
+        "carga_horaria": "20h",
+        "id": 13,
+        "descricao": "Desenvolvido em parceria com uma s\u00f3lida empresa de engenharia el\u00e9trica e automa\u00e7\u00e3o industrial - a GreyLogix, garantimos um material completo e atualizado, al\u00e9m de tutores altamente qualificados e com experi\u00eancia pr\u00e1tica. Uma solu\u00e7\u00e3o inovadora para certifica\u00e7\u00e3o profissional com uma metodologia que facilita e potencializa o processo de aprendizagem, gerando economia de tempo e dinheiro."
+    },
+    {
+        "imageSrc": "https://imgur.com/3qHbe0Q.png",
+        "valor": "R$ 219,90",
+        "titulo": "NR10 - SEP - Reciclagem (Sistema El\u00e9trico de Pot\u00eancia)",
+        "carga_horaria": "40h",
+        "id": 14,
+        "descricao": "Desenvolvido em parceria com uma s\u00f3lida empresa de engenharia el\u00e9trica e automa\u00e7\u00e3o industrial - a GreyLogix, garantimos um material completo e atualizado, al\u00e9m de tutores altamente qualificados e com experi\u00eancia pr\u00e1tica. Uma solu\u00e7\u00e3o inovadora para certifica\u00e7\u00e3o profissional com uma metodologia que facilita e potencializa o processo de aprendizagem, gerando economia de tempo e dinheiro."
+    },
+    {
+        "imageSrc": "https://imgur.com/DroH9wM.png",
+        "valor": "R$ 119,90",
+        "titulo": "NR11 - Transporte Movimenta\u00e7\u00e3o Armazenagem e Manuseio de Materiais",
+        "carga_horaria": "8h",
+        "id": 15,
+        "descricao": "Este treinamento tem como finalidade apresentar conceitos b\u00e1sicos de seguran\u00e7a nos processos envolvendo levantamento, transporte e descargas de forma manual ou com uso de m\u00e1quinas/equipamentos e conscientizar os trabalhadores sobre os riscos existentes na opera\u00e7\u00e3o, assim como a import\u00e2ncia e necessidade de atender \u00e0s normas t\u00e9cnicas de seguran\u00e7a."
+    },
+    {
+        "imageSrc": "https://imgur.com/s10vbQ3.png",
+        "valor": "109,90",
+        "titulo": "NR11 - Transporte Movimenta\u00e7\u00e3o Armazenagem e Manuseio de Materiais (Reciclagem)",
+        "carga_horaria": "4h",
+        "id": 16,
+        "descricao": "Este treinamento tem como finalidade apresentar conceitos b\u00e1sicos de seguran\u00e7a nos processos envolvendo levantamento, transporte e descargas de forma manual ou com uso de m\u00e1quinas/equipamentos e conscientizar os trabalhadores sobre os riscos existentes na opera\u00e7\u00e3o, assim como a import\u00e2ncia e necessidade de atender \u00e0s normas t\u00e9cnicas de seguran\u00e7a."
+    },
+    {
+        "imageSrc": "https://imgur.com/J0wCEt5.png",
+        "valor": "R$ 119,90",
+        "titulo": "NR12 - Seguran\u00e7a no Trabalho em M\u00e1quinas e Equipamentos (Geral)",
+        "carga_horaria": "8h",
+        "id": 17,
+        "descricao": "Este treinamento tem como finalidade apresentar conceitos b\u00e1sicos de seguran\u00e7a de m\u00e1quinas e conscientizar os trabalhadores sobre os riscos existentes na opera\u00e7\u00e3o e manuseio dos equipamentos, assim como a import\u00e2ncia e necessidade de atender \u00e0s normas t\u00e9cnicas de seguran\u00e7a."
+    },
+    {
+        "imageSrc": "https://imgur.com/C7v61hH.png",
+        "valor": "109,90",
+        "titulo": "NR12 - Seguran\u00e7a no Trabalho em M\u00e1quinas e Equipamentos (Geral) (Reciclagem)",
+        "carga_horaria": "8h",
+        "id": 18,
+        "descricao": "Este treinamento tem como finalidade apresentar conceitos b\u00e1sicos de seguran\u00e7a de m\u00e1quinas e conscientizar os trabalhadores sobre os riscos existentes na opera\u00e7\u00e3o e manuseio dos equipamentos, assim como a import\u00e2ncia e necessidade de atender \u00e0s normas t\u00e9cnicas de seguran\u00e7a."
+    },
+    {
+        "imageSrc": "https://imgur.com/ry6KCxI.png",
+        "valor": "R$ 109,90",
+        "titulo": "NR17 - Ergonomia",
+        "carga_horaria": "2h",
+        "id": 19,
+        "descricao": "Ao final deste treinamento voc\u00ea ser\u00e1 capaz de: Explicar o que \u00e9 Ergonomia e suas \u00e1reas de aplica\u00e7\u00e3o; Verificar se um posto de trabalho oferece condi\u00e7\u00f5es ergon\u00f4micas adequadas;Ajustar mobili\u00e1rios, equipamentos e ferramentas para preservar sua sa\u00fade; Promover discuss\u00f5es sobre o tema: Ergonomia."
+    },
+    {
+        "imageSrc": "https://imgur.com/Q2arj4c.png",
+        "valor": "109,90",
+        "titulo": "NR17 - Ergonomia para Operadores de Checkout",
+        "carga_horaria": "2h",
+        "id": 20,
+        "descricao": "Ao final deste treinamento voc\u00ea ser\u00e1 capaz de: Explicar o que \u00e9 Ergonomia e suas \u00e1reas de aplica\u00e7\u00e3o; Verificar se um posto de trabalho oferece condi\u00e7\u00f5es ergon\u00f4micas adequadas; Ajustar mobili\u00e1rios, equipamentos e ferramentas para preservar sua sa\u00fade; Promover discuss\u00f5es sobre o tema: Ergonomia."
+    },
+    {
+        "imageSrc": "https://imgur.com/oLblF6q.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR18 - Seguran\u00e7a e Sa\u00fade No Trabalho Na Ind\u00fastria Da Constru\u00e7\u00e3o (B\u00e1sico em Seguran\u00e7a do Trabalho)",
+        "carga_horaria": "4h",
+        "id": 21,
+        "descricao": "Unidade 1: Para a capacita\u00e7\u00e3o b\u00e1sica em seguran\u00e7a do trabalho: I. as condi\u00e7\u00f5es e meio ambiente de trabalho; II. os riscos inerentes \u00e0s atividades desenvolvidas; III. os equipamentos e prote\u00e7\u00e3o coletiva existentes no canteiro de obras; IV. o uso adequado dos equipamentos de prote\u00e7\u00e3o individual; V. o PGR do canteiro de obras."
+    },
+    {
+        "imageSrc": "https://imgur.com/Vou341A.png",
+        "valor": "239,90",
+        "titulo": "NR20 Avan\u00e7ado I",
+        "carga_horaria": "20h",
+        "id": 22,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel. O curso pode ser realizado no formato EAD, Semipresencial ou \u00e0 Dist\u00e2ncia. Disp\u00f5e de uma unidade de ensino totalmente interativa, desenvolvida em computa\u00e7\u00e3o gr\u00e1fica e com conte\u00fado acess\u00edvel para todos os n\u00edveis profissionais. Possui exerc\u00edcios, f\u00f3rum e prova de sufici\u00eancia para emiss\u00e3o de certificado. O aluno conta com apoio e orienta\u00e7\u00e3o de um tutor-especialista durante todo o curso."
+    },
+    {
+        "imageSrc": "https://imgur.com/bYdgvKl.png",
+        "valor": "R$ 169,90",
+        "titulo": "NR20 Avan\u00e7ado I (Reciclagem)",
+        "carga_horaria": "4h",
+        "id": 23,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/YokreAV.png",
+        "valor": "R$ 249,90",
+        "titulo": "NR20 Avan\u00e7ado II",
+        "carga_horaria": "32h",
+        "id": 24,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/rwjdaMt.png",
+        "valor": "R$ 179,90",
+        "titulo": "NR20 Avan\u00e7ado II (Reciclagem)",
+        "carga_horaria": "4h",
+        "id": 25,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/k6YDrb0.png",
+        "valor": "R$ 109,90",
+        "titulo": "NR20 B\u00e1sico (Reciclagem)",
+        "carga_horaria": "4h",
+        "id": 26,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/fMzwKCn.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR20 B\u00e1sico Classe I",
+        "carga_horaria": "4h",
+        "id": 27,
+        "descricao": " O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/PXm6AcV.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR20 B\u00e1sico Classe II",
+        "carga_horaria": "6h",
+        "id": 28,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/xsymrIB.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR20 B\u00e1sico Classe III",
+        "carga_horaria": "8h",
+        "id": 29,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/4I1bFFh.png",
+        "valor": "R$ 149,90",
+        "titulo": "NR20 Inflam\u00e1veis e Combust\u00edveis N\u00edvel Espec\u00edfico Classe II",
+        "carga_horaria": "4h",
+        "id": 30,
+        "descricao": "O Curso da NR20 Inflam\u00e1veis e Combust\u00edveis N\u00edvel Espec\u00edfico Classe II, visa capacitar os trabalhadores da \u00e1rea de sa\u00fade e seguran\u00e7a que atuam nas instala\u00e7\u00f5es classe II. O aluno ter\u00e1 conhecimento sobre a norma, conhecer\u00e1 metodologias de an\u00e1lise de risco, permiss\u00e3o de trabalho e receber\u00e1 orienta\u00e7\u00e3o dos procedimentos a serem seguidos em situa\u00e7\u00f5es de emerg\u00eancia relacionadas \u00e0 inflam\u00e1veis e combust\u00edveis."
+    },
+    {
+        "imageSrc": "https://imgur.com/LHACw6j.png",
+        "valor": "R$ 189,90",
+        "titulo": "NR20 Inflam\u00e1veis e Combust\u00edveis N\u00edvel Espec\u00edfico Classe III",
+        "carga_horaria": "16h",
+        "id": 31,
+        "descricao": "O aluno ter\u00e1 conhecimento sobre a norma, conhecer\u00e1 metodologias de an\u00e1lise de risco, permiss\u00e3o de trabalho e receber\u00e1 orienta\u00e7\u00e3o dos procedimentos a serem seguidos em emerg\u00eancias relacionadas \u00e0 inflam\u00e1veis e combust\u00edveis."
+    },
+    {
+        "imageSrc": "https://imgur.com/CjxahVE.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR20 Inicia\u00e7\u00e3o sobre Inflam\u00e1veis e Combust\u00edveis",
+        "carga_horaria": "4h",
+        "id": 32,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/YfsWpTk.png",
+        "valor": "R$ 149,90",
+        "titulo": "NR20 Intermedi\u00e1rio (Reciclagem)",
+        "carga_horaria": "4h",
+        "id": 33,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/5sv49OZ.png",
+        "valor": "R$ 219,90",
+        "titulo": "NR20 Intermedi\u00e1rio Classe I",
+        "carga_horaria": "12h",
+        "id": 34,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/ceroCp3.png",
+        "valor": "R$ 219,90",
+        "titulo": "NR20 Intermedi\u00e1rio Classe II",
+        "carga_horaria": "14h",
+        "id": 35,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/bHndait.png",
+        "valor": "R$ 219,90",
+        "titulo": "NR20 Intermedi\u00e1rio Classe III",
+        "carga_horaria": "16h",
+        "id": 36,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b020 os processos envolvendo inflam\u00e1veis e combust\u00edveis. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente os processos rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/yfcE495.png",
+        "valor": "R$ 189,90",
+        "titulo": "NR22 - CIPAMIN - Comiss\u00e3o Interna de Preven\u00e7\u00e3o de Acidentes de Trabalho na Minera\u00e7\u00e3o",
+        "carga_horaria": "24h",
+        "id": 37,
+        "descricao": "Capacitar os profissionais de diferentes especialidades para realizarem atividades de trabalho em \u00e1reas de minera\u00e7\u00e3o, conscientizando-os sobre os riscos inerentes a estes locais para que respeitem as boas pr\u00e1ticas relacionadas a sa\u00fade e seguran\u00e7a dos trabalhadores."
+    },
+    {
+        "imageSrc": "https://imgur.com/Mt4ZYdr.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR26 - Sinaliza\u00e7\u00e3o de Seguran\u00e7a",
+        "carga_horaria": "4h",
+        "id": 38,
+        "descricao": "O objetivo geral deste curso \u00e9 reconhecer o conte\u00fado te\u00f3rico da Norma Regulamentadora 26, que aborda a Rotulagem de Produtos Qu\u00edmicos e as Sinaliza\u00e7\u00f5es de Seguran\u00e7a, e compreender como aplicar tais conhecimentos em seu ambiente profissional, de maneira a identificar situa\u00e7\u00f5es de risco e perigo, prevenir acidentes e saber agir em situa\u00e7\u00f5es de emerg\u00eancia."
+    },
+    {
+        "imageSrc": "https://imgur.com/hR98QXY.png",
+        "valor": "R$ 129,90",
+        "titulo": "NR32 - Seguran\u00e7a e Sa\u00fade no Trabalho em Servi\u00e7os de Sa\u00fade",
+        "carga_horaria": "8h",
+        "id": 39,
+        "descricao": "Capacitar e orientar empres\u00e1rios e profissionais que atuam na \u00e1rea de sa\u00fade sobre os riscos aos quais s\u00e3o expostos na realiza\u00e7\u00e3o das suas tarefas, para que possam trabalhar em seguran\u00e7a e adotar medidas de preven\u00e7\u00e3o reduzindo o risco de acidentes e adoecimento aos profissionais que atuam na \u00e1rea da sa\u00fade."
+    },
+    {
+        "imageSrc": "https://imgur.com/OaTOjhk.png",
+        "valor": "R$ 169,90",
+        "titulo": "NR31 - CIPA Trabalho Rural",
+        "carga_horaria": "20h",
+        "id": 40,
+        "descricao": "O curso CIPATR aborda os requisitos de treinamentos previstos na norma regulamentadora NR5 e NR31, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/HMYmJ9y.png",
+        "valor": "R$ 229,90",
+        "titulo": "NR33 Supervisor",
+        "carga_horaria": "40h",
+        "id": 41,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como capacitar os profissionais da \u00e1rea a preven\u00e7\u00e3o de acidentes, procedimentos e medidas de prote\u00e7\u00e3o em espa\u00e7os confinados, de acordo com a NBR 14787, que estabelece os requisitos m\u00ednimos para prote\u00e7\u00e3o dos trabalhadores e do local de trabalho, bem como os riscos de entrada em espa\u00e7os confinados."
+    },
+    {
+        "imageSrc": "https://imgur.com/Qaqp2WS.png",
+        "valor": "R$ 159,90",
+        "titulo": "NR33 Supervisor (Reciclagem)",
+        "carga_horaria": "8h",
+        "id": 42,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como capacitar os profissionais da \u00e1rea a preven\u00e7\u00e3o de acidentes, procedimentos e medidas de prote\u00e7\u00e3o em espa\u00e7os confinados, de acordo com a NBR 14787, que estabelece os requisitos m\u00ednimos para prote\u00e7\u00e3o dos trabalhadores e do local de trabalho, bem como os riscos de entrada em espa\u00e7os confinados."
+    },
+    {
+        "imageSrc": "https://imgur.com/yLFYXV0.png",
+        "valor": "R$ 189,90",
+        "titulo": "NR33 Trabalhador e Vigia",
+        "carga_horaria": "16h",
+        "id": 43,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como os processos e trabalhos envolvendo espa\u00e7os confinados. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente as atividades rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/T1qE9UM.png",
+        "valor": "R$ 119,90",
+        "titulo": "NR33 Trabalhador e Vigia (Reciclagem)",
+        "carga_horaria": "8h",
+        "id": 44,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como os processos e trabalhos envolvendo espa\u00e7os confinados. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente as atividades rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/XEhyW2a.png",
+        "valor": "R$ 169,90",
+        "titulo": "NR34 - Trabalho a Quente",
+        "carga_horaria": "8h",
+        "id": 45,
+        "descricao": "Capacitar os trabalhadores no curso b\u00e1sico de seguran\u00e7a para trabalhos a quente para o cumprimento da Norma Regulamentadora n\u00ba 34"
+    },
+    {
+        "imageSrc": "https://imgur.com/2P6WIrW.png",
+        "valor": "R$ 189,90",
+        "titulo": "NR35 - Trabalho em Altura",
+        "carga_horaria": "24h",
+        "id": 46,
+        "descricao": "Um curso que aborda as principais especifica\u00e7\u00f5es relacionadas ao trabalho em altura. Est\u00e1 em conformidade a Norma Regulamentadora \u2013 NR 35 e possui certificado v\u00e1lido em todo Brasil \u2013 portaria 008/02 da Secretaria de Estado da Educa\u00e7\u00e3o e do Desporto de Santa Catarina. Neste curso, o aluno ser\u00e1 capacitado para atuar com seguran\u00e7a no trabalho em altura correspondente \u00e0 sua fun\u00e7\u00e3o."
+    },
+    {
+        "imageSrc": "https://imgur.com/eel0faO.png",
+        "valor": "R$ 119,90",
+        "titulo": "NR35 - Trabalho em Altura - Trabalhador (Reciclagem)",
+        "carga_horaria": "8h",
+        "id": 47,
+        "descricao": "Um curso que aborda as principais especifica\u00e7\u00f5es relacionadas ao trabalho em altura. Est\u00e1 em conformidade a Norma Regulamentadora \u2013 NR 35 e possui certificado v\u00e1lido em todo Brasil \u2013 portaria 008/02 da Secretaria de Estado da Educa\u00e7\u00e3o e do Desporto de Santa Catarina. Neste curso, o aluno ser\u00e1 capacitado para atuar com seguran\u00e7a no trabalho em altura correspondente \u00e0 sua fun\u00e7\u00e3o."
+    },
+    {
+        "imageSrc": "https://imgur.com/gvFLAyr.png",
+        "valor": "R$ 139,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 1",
+        "carga_horaria": "8h",
+        "id": 48,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/gvFLAyr.png",
+        "valor": "R$ 139,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 1 - Representante Nomeado - EAD",
+        "carga_horaria": "8h",
+        "id": 49,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 149,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 2",
+        "carga_horaria": "12h",
+        "id": 50,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 149,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 2 - Representante Nomeado - EAD",
+        "carga_horaria": "12h",
+        "id": 51,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 159,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 3",
+        "carga_horaria": "16h",
+        "id": 52,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 159,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 3 - Representante Nomeado - EAD",
+        "carga_horaria": "16h",
+        "id": 53,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como os processos e trabalhos envolvendo espa\u00e7os confinados. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente as atividades rotineiros de forma segura e respons\u00e1vel."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 169,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 4",
+        "carga_horaria": "20h",
+        "id": 54,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/vT7o7Zt.png",
+        "valor": "R$ 169,90",
+        "titulo": "NR5 - CIPA - GRAU DE RISCO 4 - Representante Nomeado - EAD",
+        "carga_horaria": "20h",
+        "id": 55,
+        "descricao": "O curso CIPA aborda os requisitos de treinamentos previstos na norma regulamentadora NR-5, provendo conhecimentos pertinentes a atua\u00e7\u00e3o da comiss\u00e3o e sua organiza\u00e7\u00e3o; al\u00e9m de abordar boas pr\u00e1ticas para a preven\u00e7\u00e3o de acidentes; recomenda\u00e7\u00f5es para desenvolver e manter ambientes saud\u00e1veis e seguros; boas pr\u00e1ticas de sa\u00fade ocupacional e medidas para atuar em casos emerg\u00eancias."
+    },
+    {
+        "imageSrc": "https://imgur.com/K4MoHuO.png",
+        "valor": "R$ 109,90",
+        "titulo": "NR6 - EPIs e EPCs (Equipamentos de Prote\u00e7\u00e3o Individual e Coletiva)",
+        "carga_horaria": "2h",
+        "id": 56,
+        "descricao": "\u00c9 um curso sobre o uso dos Equipamentos de Prote\u00e7\u00e3o Individual (EPIs) em conformidade com a Norma Regulamentadora \u2013 NR 6. Certificado v\u00e1lido em todo Brasil \u2013 portaria 008/02 da Secretaria de Estado da Educa\u00e7\u00e3o e do Desporto de Santa Catarina. Neste curso, o aluno ser\u00e1 capacitado sobre a import\u00e2ncia desses equipamentos e como utiliz\u00e1-los."
+    },
+    {
+        "imageSrc": "https://imgur.com/LFPQDxB.png",
+        "valor": "R$ 109,90",
+        "titulo": "PPR - Programa de Prote\u00e7\u00e3o Respirat\u00f3ria",
+        "carga_horaria": "2h",
+        "id": 57,
+        "descricao": "Garantir o uso correto e obter informa\u00e7\u00f5es sobre a guarda, limpeza e higieniza\u00e7\u00e3o dos respiradores e que todo participante, durante o treinamento, tenha a oportunidade de manusear e repetir os mesmos procedimentos demonstrados pelo instrutor."
+    },
+    {
+        "imageSrc": "https://imgur.com/UcVqtg5.png",
+        "valor": "R$ 109,90",
+        "titulo": "Preven\u00e7\u00e3o e Combate \u00e0 COVID-19",
+        "carga_horaria": "2h",
+        "id": 58,
+        "descricao": "O curso de Preven\u00e7\u00e3o e Combate \u00e0 COVID-19 tem como objetivo prevenir os trabalhadores contra a contamina\u00e7\u00e3o da COVID-19 dentro do ambiente profissional e apresentar as informa\u00e7\u00f5es necess\u00e1rias caso seja necess\u00e1rio realizar o isolamento domiciliar."
+    },
+    {
+        "imageSrc": "https://imgur.com/eRM2ZRg.png",
+        "valor": "R$ 109,90",
+        "titulo": "Preven\u00e7\u00e3o e Prote\u00e7\u00e3o Contra Inc\u00eandios",
+        "carga_horaria": "6h",
+        "id": 59,
+        "descricao": "O treinamento de Preven\u00e7\u00e3o e Prote\u00e7\u00e3o Contra Inc\u00eandios (PPCI) \u00e9 parte do conte\u00fado de Forma\u00e7\u00e3o de Brigada de Inc\u00eandio/Emerg\u00eancia. O treinamento tem como objetivo a instru\u00e7\u00e3o te\u00f3rica \u00e0 preven\u00e7\u00e3o e prote\u00e7\u00e3o contra inc\u00eandios."
+    },
+    {
+        "imageSrc": "https://imgur.com/TDv4EwO.png",
+        "valor": "R$ 109,90",
+        "titulo": "Ressuscita\u00e7\u00e3o Cardiopulmonar - (RCP)",
+        "carga_horaria": "3h",
+        "id": 60,
+        "descricao": "Este treinamento, tem como objetivo capacitar o aluno para identificar e socorrer v\u00edtimas de obstru\u00e7\u00e3o da via respirat\u00f3ria, casos de parada respirat\u00f3ria e foma de realizar a ressuscita\u00e7\u00e3o pulmonar."
+    },
+    {
+        "imageSrc": "https://imgur.com/SUfhlmc.png",
+        "valor": "R$ 109,90",
+        "titulo": "Treinamento de Valas e Escava\u00e7\u00f5es",
+        "carga_horaria": "2h",
+        "id": 61,
+        "descricao": "Unidade 1: Objetivos; Princ\u00edpio B\u00e1sico de Seguran\u00e7a; Prioridade na Implanta\u00e7\u00e3o de Medidas; Sistemas de Prote\u00e7\u00e3o; Riscos em Escava\u00e7\u00f5es; Riscos em Funda\u00e7\u00f5es Escavadas; Riscos em Funda\u00e7\u00f5es Cravadas e Injetadas; Riscos em Desmonte de Rochas com o Uso de Explosivos. "
+    },
+    {
+        "imageSrc": "https://imgur.com/954kMp1.png",
+        "valor": "R$ 189,90",
+        "titulo": "NR33 Trabalhador e Vigia",
+        "carga_horaria": "16h",
+        "id": 62,
+        "descricao": "O curso aborda as exig\u00eancias legais contida na Norma Regulamentadora n\u00b033, assim como os processos e trabalhos envolvendo espa\u00e7os confinados. Ao final deste treinamento voc\u00ea dever\u00e1 ser capaz de executar corretamente as atividades rotineiros de forma segura e respons\u00e1vel."
+    }
+]

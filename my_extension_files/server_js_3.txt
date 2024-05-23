@@ -1,0 +1,67 @@
+res.send({ success: true, message: `${result.affectedRows} registro(s) foram excluídos.` });
+    } else {
+      res.send({ success: false, message: 'Não há registros para excluir.' });
+    }
+  });
+});
+
+app.post('/register', (req, res) => {
+  const { usuario, nome, email, senha, unidade, setor, acesso } = req.body;
+
+  const query = 'INSERT INTO cadastro (usuario, nome, email, senha, unidade, setor, acesso) VALUES (?, ?, ?, ?, ?, ?, ?)';
+  db.query(query, [usuario, nome, email, senha, unidade, setor, acesso], (err, result) => {
+    
+    if (err) {
+      console.log(err);
+      return res.send({ success: false, message: err.message });
+    }
+
+    res.send({ success: true });
+  });
+
+});
+
+app.use((req, res, next) => {
+  // Se não há token na requisição, passe para a próxima rota
+  if (!req.headers.authorization) return next();
+
+  // Decodificar o token
+  const token = req.headers.authorization.split(' ')[1];
+  try {
+    const payload = jwt.verify(token, 'suus02201998##');
+    req.user = payload;
+  } catch (error) {
+    console.log('Error decoding JWT: ', error);
+  }
+
+  next();
+});
+
+const protectedRoutes = [
+  { url: '/deleteAll', methods: ['DELETE'], roles: ['admin'] },
+  // Adicione outras rotas protegidas aqui
+];
+
+app.use((req, res, next) => {
+  if (!req.user) return next();
+
+  const protectedRoute = protectedRoutes.find(
+    (route) => route.url === req.path && route.methods.includes(req.method)
+  );
+
+  if (protectedRoute && !protectedRoute.roles.includes(req.user.role)) {
+    return res.status(403).json({ success: false, message: 'Forbidden' });
+  }
+
+  next();
+});
+const token = jwt.sign({ id: user.id, role: user.acesso }, 'suus02201998##', { expiresIn: '1h' });
+
+
+
+app.post('/payment_notification', (req, res) => {
+  // Extraia os detalhes do pagamento do corpo da requisição
+  const { id, email, cursos, valor } = req.body;
+
+  // Query para inserir os detalhes do pagamento no banco de dados
+  const query 

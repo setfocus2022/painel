@@ -1,0 +1,73 @@
+veItem('role');
+            localStorage.removeItem('birthDate');
+            localStorage.removeItem('cpf');
+          }, 3600000); // 1 hora
+  
+          history.push("/usuario/painel-usuarios");
+        } else {
+          setError('Falha na autenticação');
+        }
+      });
+  };
+  
+  
+  return (
+
+    <Container className="login-container" style={{ height: '100vh', marginTop: '200px'}}>
+      <Col md={{ span: 6, offset: 3 }}>
+        <Card>
+          
+          <Card.Header as="h5" className="text-center">Login</Card.Header>
+          <Card.Body>
+            <Form>
+              <Form.Group>
+                <Form.Label>Usuário</Form.Label>
+                <Form.Control type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Senha</Form.Label>
+                <Form.Control type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
+              </Form.Group>
+              {error && <Alert variant="danger">{error}</Alert>}
+              <Button style={{ backgroundColor: '#85BB32' }} variant="primary" onClick={handleLogin} block>Logar</Button>
+            </Form>
+            <div className="text-center mt-3">
+              <a href="/PrimeiroAcesso" >Primeiro acesso</a>
+            </div>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Container>
+  );
+};
+
+
+export default Login;
+
+*Finalizei a plataforma e fiz a atualização*. Voces tinham me pedido para: 
+- Remover Udop do certificado;  *FEITO*
+- Mudar acessos dos módulos para 15 DIAS e alterar valor para R$ 280.00; *FEITO*
+- Exclusão do curso apos revisar a aula 3x; *FEITO*
+- Criar Termo de compra e Uso; *Felipe me disse que ia dar uma revisada nisso*
+
+Alterei e melhorei:
+- estilo da plataforma;
+- tratamento de criação de usuarios *( verificação de email valido e se o usuario ja existe no banco de dados)*
+- *CORRIGI PROBLEMA DE CERTIFICADO NAO GERADO PELA PRIMEIRA VEZ;*
+
+Falta apenas:
+- Criar o termos de uso e compra;
+- Melhorar o site Institucional; *ESTOU FAZENDO ISSO AGORA*
+
+em resumo a plataforma esta funcional e corrigida conforme me pediram na reunião. De importante mesmo apenas os termos de compra e uso, mas conforme conversei com o Felipe ontem ele me disse que ia dar uma revisada nisso e depois ia me passar.
+Fico entao agora para trabalhar no visual do institucional conforme o Felipe me sugestionou para alterar. Essa atualização foi para subir a plataforma *FUNCIONAL*
+
+
+*O CHECKOUT ESTA COMO MODO TESTE, NÃO ATUALIZEI PARA AS CREDENCIAIS QUE ME PASSARAM*. Voces vão querer testar a plataforma no *checkout teste* ou no *chekout em produção?* *Pois apartir do momento que colocar-mos o checkout em produção todas as compras deveram ser REAIS.* como o Seu Amadeu disse que ia fazer um teste de primeiras impressões na plataforma, *seria melhor usar as credenciais de mercado pago TESTE*, vou enviar as informações de cartao de credito e cpf para testarem. 
+
+Cartao de credito: *5031 4332 1540 6351*
+Vencimento: *11/25* Codigo segurança: *123*
+
+CPF: *12345678909*
+
+Email: *pode ser qualquer um.*

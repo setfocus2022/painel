@@ -1,0 +1,71 @@
+ = {};
+    }
+
+    newContacts[index][name] = value;
+    setContacts(newContacts);
+
+    // Verificar se "--SELECIONE--" foi selecionado
+    if (value === '--SELECIONE--') {
+      alert('Por favor, selecione uma categoria.');
+      return; // Não faça nada se "--SELECIONE--" for selecionado
+    }
+  
+    // Adicionar nova categoria se a opção 'Especifique..' foi selecionada
+    if (name === 'category' && value === 'Especifique..') {
+      const newCategory = prompt('Por favor, especifique a nova categoria:');
+      if (newCategory) {
+        setCategories([...categories, newCategory]);
+        setFormData(prevState => {
+          const newContacts = [...prevState.contacts];
+          newContacts[index][name] = newCategory;
+          return { ...prevState, contacts: newContacts };
+        });
+      }
+    } else {
+      setFormData(prevState => {
+        const newContacts = [...prevState.contacts];
+        newContacts[index][name] = value;
+        return { ...prevState, contacts: newContacts };
+      });
+    }
+  };
+  
+  
+  
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+  
+    // Aqui removemos a validação de CPF e CNPJ porque isso será feito na função handleSubmit
+  
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  
+    if (name === 'zipCode') {
+      const cep = value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => {
+            const { logradouro, bairro, localidade, uf } = response.data;
+            setFormData(prevState => ({
+              ...prevState,
+              address: logradouro,
+              district: bairro,
+              city: localidade,
+              state: uf,
+            }));
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
+    }
+  };
+  
+
+  
+
+  const removeContact = (indexToRemove) => {
+    

@@ -1,0 +1,80 @@
+tado com o valor do CNPJ
+    setFormData(prevState => ({
+      ...prevState,
+      cnpj: value
+    }));
+  };
+  
+  const [notification, setNotification] = useState(null);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    // Destructure the relevant fields from formData and endereco state
+    const {
+      instituicao,
+      inscricaoEstadual,
+      razaoSocial,
+      numero,
+      complemento,
+    } = formData;
+    const { cnpj } = formData; // Assuming cnpjData contains the cnpj information
+    const {
+      logradouro,
+      bairro,
+      cidade,
+      estado,
+      cep,
+    } = endereco;
+    // Construct the data to be sent to the server
+    const dataToSend = {
+      nome: instituicao,
+      cnpj: cnpj,
+      inscricaoEstadual: inscricaoEstadual,
+      razaoSocial: razaoSocial,
+      logradouro: logradouro,
+      numero: numero,
+      complemento: complemento,
+      bairro: bairro,
+      cidade: cidade,
+      estado: estado,
+      pais: 'Brasil',
+      cep: cep,
+      contatos: contatos,
+      unidades: unidades,
+      setores: setores,
+      cargos: cargos,
+      usuarios: usuarios,
+    };
+  
+    // Send a POST request to the server
+    try {
+      const response = await fetch('https://fair-ruby-caterpillar-wig.cyclic.app/instituicoes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend),
+      });
+  
+      if (response.ok) {
+        setNotification({
+          type: 'success',
+          message: 'Instituição registrada com sucesso!',
+        });
+      } else {
+        throw new Error('Erro ao enviar os dados para o servidor');
+      }
+    } catch (error) {
+      setNotification({
+        type: 'danger',
+        message: 'Erro ao enviar os dados para o servidor',
+      });
+      console.error('Erro ao enviar os dados para o servidor:', error);
+    }
+  };
+  
+  
+
+  return (
+    <Container>
+     

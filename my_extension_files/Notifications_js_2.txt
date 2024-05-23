@@ -1,0 +1,54 @@
+  <a
+                href="https://github.com/creativetimofficial/react-notification-alert"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                full documentation.
+              </a>
+            </p>
+          </Card.Header>
+          <Card.Body>
+            <Row>
+              <Col md="6">
+                <h5>
+                  <small>Notifications Style</small>
+                </h5>
+                <Alert variant="info">
+                  <span>This is a plain notification</span>
+                </Alert>
+                <Alert variant="info">
+                  <button
+                    aria-hidden={true}
+                    className="close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className="nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>This is a notification with close button.</span>
+                </Alert>
+                <Alert className="alert-with-icon" variant="info">
+                  <button
+                    aria-hidden={true}
+                    className="close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className="nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span
+                    data-notify="icon"
+                    className="nc-icon nc-bell-55"
+                  ></span>
+                  <span>
+                    This is a notification with close button and icon.
+                  </span>
+                </Alert>
+                <Alert className="alert-with-icon" variant="info">
+                  <button
+                    aria-hidden={true}
+                    className="close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className="nc-icon 

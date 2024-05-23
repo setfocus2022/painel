@@ -1,0 +1,33 @@
+dleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <h1>Setores</h1>
+        {renderSetoresDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => handleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <h1>Cargos</h1>
+        {renderCargosDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => handleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <h1>Usuários</h1>
+        {renderUsuariosDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => handleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <button onClick={() => handleDeleteInstituicao(selectedInstituicao.id)}>Excluir Instituição</button>
+
+        </div>
+      )}
+    </Container>
+  );
+};
+
+export default GerenciamentoInstituicoes;

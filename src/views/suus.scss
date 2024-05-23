@@ -1,0 +1,16 @@
+/* Estilos para dispositivos com largura menor que 768px */
+@media (max-width: 767px) {
+    .search-card {
+      width: 90%;
+    }
+    .search-input {
+      font-size: 0.8rem;
+    }
+    .table-card {
+      overflow-x: auto;
+    }
+    .table-users {
+      font-size: 0.8rem;
+    }
+  }
+  

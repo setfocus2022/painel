@@ -1,0 +1,62 @@
+te.
+                                      </Tooltip>
+                                  }
+                              >
+                                  <Form.Control 
+                                      type="text"
+                                      name="unit"
+                                      value={unit}
+                                      onChange={(e) => handleUnitChange(e, index)}
+                                  />
+                              </OverlayTrigger>
+                          </Col>
+                      </Form.Group>
+                      <Form.Group as={Row}>
+                          <Col md={{ offset: 2, span: 10 }}>
+                              <Button onClick={() => removeUnit(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                          </Col>
+                      </Form.Group>
+                      <hr />
+                  </div>
+              ))}
+              
+          </Card.Body>
+      </Card>
+
+
+
+        
+      <Card>
+        <Card.Header>
+          SETORES
+          <span style={{ cursor: 'pointer', float: 'right' }} onClick={addSector}>ADICIONAR</span>
+        </Card.Header>
+        <Card.Body>
+          {sectors.map((sector, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Setor:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    value={sector}
+                    onChange={(e) => handleSectorChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeSector(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+         
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>
+  

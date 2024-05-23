@@ -1,0 +1,67 @@
+--- FILENAME: NovaInstituicao_modified.js
+import React, { useState , useEffect } from 'react';
+import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
+import './NovaInstituicao.scss';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { cpf, cnpj } from 'cpf-cnpj-validator'; 
+
+
+const NRs = () => {
+  const [importPath, setImportPath] = React.useState('');
+  const [sectors, setSectors] = useState([{ name: '' }]); // Corrigido
+  const [positions, setPositions] = useState([{ name: '' }]); // Corrigido
+  const [users, setUsers] = useState([{ name: '', identifier: '', status: 'Registrando' }]); // Corrigido
+  const [contacts, setContacts] = useState([{ name: '', phone: '', category: '' }]); // Corrigido
+  const [units, setUnits] = useState([{ name: '' }]); // Corrigido
+
+ 
+
+  function addUser() {
+    setFormData(prevState => ({
+      ...prevState,
+      users: [...prevState.users, { name: '', identifier: '', status: 'Registrando' }],
+    }));
+  }
+  
+  function removeUser(index) {
+    setUsers(users.filter((user, i) => i !== index));
+  }
+  
+  function handleUserChange(e, index, field) {
+    const newUsers = [...users];
+    newUsers[index][field] = e.target.value;
+    setUsers(newUsers);
+  }
+  
+
+  const handleSectorChange = (e, index) => {
+    const newSectors = [...sectors];
+    newSectors[index] = e.target.value;
+    setSectors(newSectors);
+  }
+  
+  const handlePositionChange = (e, index) => {
+    const newPositions = [...positions];
+    newPositions[index] = e.target.value;
+    setPositions(newPositions);
+  }
+  
+  const addSector = () => {
+    setSectors([...sectors, '']);
+  }
+  
+  const addPosition = () => {
+    setPositions([...positions, '']);
+  }
+  
+  const removeSector = (index) => {
+    const newSectors = [...sectors];
+    newSectors.splice(index, 1);
+    setSectors(newSectors);
+  }
+  
+  const removePosition = (index) => {
+    const newPositions = [...positions];
+    newPositions.splice(index, 1);
+    setP

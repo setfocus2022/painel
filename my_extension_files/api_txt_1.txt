@@ -1,0 +1,51 @@
+--- FILENAME: api.txt
+
+        <Card>
+          <Card.Header>CONFIGURAÇÕES DE API</Card.Header>
+          <Card.Body>
+          <Form.Group as={Row}>
+              <Form.Label column sm={9}>Solicitar recuperação de acesso:</Form.Label>
+              <Col sm={3} className="d-flex align-items-center">
+                <Form.Check type="checkbox" name="accessRecovery" inline onChange={handleCheckChange} />
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Chave de Acesso à API Externa*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="instituicao" onChange={handleChange} required/></Col>
+            </Form.Group>
+            
+            
+          </Card.Body>
+        </Card>
+
+        gpt-4 
+        A partir do que você mencionou, eu entendi que precisamos atingir duas metas principais:
+
+1. Para cada nova instituição criada, devemos gerar um token de acesso à API. 
+2. A API deve ser capaz de retornar dados não sensíveis relacionados à instituição e também lidar com a carga de usuários para essa instituição.
+
+Aqui estão os passos que você pode tomar para alcançar essas metas.
+
+### Passo 1: Criação do token da API
+
+Na sua tabela `cadastro_clientes`, você pode adicionar uma nova coluna `api_token`. Cada vez que uma nova instituição for criada, um novo token de API deve ser gerado e armazenado nesta coluna. 
+
+Você pode usar a biblioteca `crypto` nativa do Node.js para gerar um token. Aqui está um exemplo de como você pode fazer isso:
+
+```javascript
+const crypto = require('crypto');
+
+function generateApiToken() {
+  return crypto.randomBytes(64).toString('hex');
+}
+```
+
+Então, quando você estiver criando uma nova instituição, você pode chamar essa função para gerar um token e armazená-lo na coluna `api_token`:
+
+```javascript
+app.post('/register', (req, res) => {
+  // ...
+  const apiToken = generateApiToken();
+  // ...
+  const query =
+ 

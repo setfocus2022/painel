@@ -1,0 +1,49 @@
+do}>{estado}</option>
+                  ))}
+                </Form.Control>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>País*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="country" value={formData.country} onChange={handleChange} disabled required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CEP*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required/></Col>
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>TRABALHO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Unidade*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="unit" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Setor*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="sector" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Cargo*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="role" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>INSTITUIÇÃO*:</Form.Label>
+              <Form.Control
+                type="text"
+                name="instituicao"
+                value={formData.institution}
+                readOnly
+              />
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        
+        <Card>
+          <Card.Header>PERMISSÃO DE ACESSO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column sm={9}>Solici

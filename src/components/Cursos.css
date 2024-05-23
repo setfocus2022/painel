@@ -1,0 +1,192 @@
+.programa-card {
+  /* Garanta que não haja padding interno que possa afetar a imagem */
+  padding: 0;
+  overflow: hidden; /* Evita que a imagem exceda as bordas arredondadas do card */
+  border-radius: 0.25rem; /* Bordas arredondadas para o card */
+}
+.body-cursos {
+  background-color: #D9D9D9;
+  border-radius: 5px;
+
+}
+.periodo-acesso-explicacao-catalogo {
+  background-color: #f9f9f9; /* Cor de fundo suave para destacar */
+  border-left: 4px solid #ff9900; /* Barra lateral para destaque */
+  margin: 0px 15px 15px 15px;
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #333; /* Cor da fonte */
+}
+
+.programa-card img {
+  width: 100%; /* A imagem ocupa toda a largura do card */
+  height: 180px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível, sendo cortada se necessário */
+  border-radius: 0.25rem 0.25rem 0 0; /* Arredonda apenas as bordas superiores da imagem */
+}
+
+
+.programa-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Isso empurra o botão para o final do card */
+  height: 100%; /* Garante que o card-body ocupe todo o espaço disponível no card */
+}
+.modal-centered {
+  display: flex !important; /* Sobrescreve qualquer estilo existente */
+  align-items: center !important; /* Alinha verticalmente ao centro */
+  justify-content: center !important; /* Alinha horizontalmente ao centro */
+}
+.user-profile-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards na linha */
+}
+.valores-cursos p {
+  margin: 5px 0; /* Adiciona um pequeno espaçamento entre os valores */
+  font-size: 14px; /* Tamanho da fonte para os valores */
+  color: #333; /* Cor da fonte para os valores */
+}
+
+/* Estiliza a seção de valores dentro do card */
+.valores-cursos {
+  padding: 10px 0; /* Adiciona um espaçamento acima e abaixo da seção de valores */
+  border-top: 1px solid #eee; /* Adiciona uma linha separadora acima dos valores */
+  margin-top: 10px; /* Espaçamento entre a descrição e a seção de valores */
+}
+
+
+
+/* PainelUsuario.css */
+.originals {
+  background-color: #FF7F00;
+
+  width: auto;
+  height: 100%;
+  margin-top: -40px;
+}
+.originals h2 {
+  color: #f1f1f1;
+}
+
+
+
+
+.card-title {
+  font-size: 16px; /* Tamanho do título */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.card-text-container {
+  flex-grow: 1; /* Permite que o contêiner ocupe o espaço disponível */
+  overflow-y: auto; /* Habilita a rolagem vertical se o texto exceder o espaço */
+  margin: 0 10px 10px 10px; /* Ajusta as margens ao redor do texto */
+  max-height: 10px; /* Define uma altura máxima para o contêiner de texto */
+  font-size: 11pt; /* Ajuste conforme necessário */
+}
+.courseButton, .kctdbutton {
+  margin: 10px; /* Ajusta o espaçamento ao redor do botão */
+  padding: 8px 0; /* Reduz o preenchimento interno para diminuir a altura do botão */
+}
+/* Estiliza a barra de rolagem (apenas para Webkit browsers) */
+.programa-card .card-text-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card-text-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+  -webkit-box-orient: vertical;
+  max-height: 60px; /* Ajuste conforme necessário para se adequar ao tamanho da fonte */
+}
+.courseButton  {
+  width: calc(100% - 20px); /* Faz o botão ocupar toda a largura do card menos o padding */
+  /* Espaçamento ao redor do botão */
+  background-color: #FF7F00; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+.kctdbutton  {
+  width: 50%; /* Faz o botão ocupar toda a largura do card menos o padding */
+  margin: 10px; /* Espaçamento ao redor do botão */
+  background-color: #FF7F00; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.search-icon {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url('search.png'); /* Adicione o caminho correto da sua imagem */
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .user-profile-row .programa-card {
+    width: auto;
+    margin: 10px auto; /* Adiciona margem acima e abaixo, centraliza horizontalmente */
+  }
+
+  .user-profile-row {
+    justify-content: center; /* Centraliza os cards horizontalmente */
+  }
+
+  .profile-course-card img {
+    height: auto; /* Altura automática para manter a proporção da imagem */
+  }
+}

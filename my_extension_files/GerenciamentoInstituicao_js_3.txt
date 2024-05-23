@@ -1,0 +1,62 @@
+ail-cell">Bairro</td>
+            <td className="detail-cell">{instituicaoDetails.bairro}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Cidade</td>
+            <td className="detail-cell">{instituicaoDetails.cidade}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">Estado</td>
+            <td className="detail-cell">{instituicaoDetails.estado}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">País</td>
+            <td className="detail-cell">{instituicaoDetails.pais}</td>
+          </tr>
+          <tr>
+            <td className="detail-cell">CEP</td>
+            <td className="detail-cell">{instituicaoDetails.cep}</td>
+          </tr>
+        </tbody>
+      </Table>
+    );
+  };
+
+  const renderCargosDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.cargos) return null;
+  
+    return (
+      <Table responsive bordered className="cargos-details-table mb-4">
+        <tbody>
+          {detalhesInstituicao.cargos.map((cargo, index) => (
+            <React.Fragment key={index}>
+              
+              <tr>
+              <td className="detail-cell">Cargo</td>
+              <td className="detail-cell">{cargo.cargo}</td>
+            </tr>
+            <tr>
+              <td className="detail-cell">Instituição</td>
+              <td className="detail-cell">{cargo.instituicaoNome}</td>
+            </tr>
+            </React.Fragment>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+  
+  
+  
+  const renderContatosDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.contatos) return null;
+  
+    return (
+      <Table responsive bordered className="contatos-details-table mb-4">
+        <tbody>
+          {detalhesInstituicao.contatos.map((contato, index) => (
+            <React.Fragment key={index}>
+             
+              <tr>
+                <td className="detail-cell">Categoria</td>
+ 

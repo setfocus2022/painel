@@ -1,0 +1,48 @@
+ <Form onSubmit={handleSubmit}>
+        <Card>
+          <Card.Header>IDENTIFICAÇÃO</Card.Header>
+          <Card.Body>
+            <Form.Group>
+              <Form.Label>Instituição</Form.Label>
+              <Form.Control type="text" name="instituicao" onChange={handleChange} />
+              <Form.Label>CNPJ</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Digite o CNPJ"
+                onChange={handleCNPJChange}
+              />
+              {!isCNPJValid && <div className="text-danger">CNPJ inválido!</div>}
+              <Form.Label>Inscrição Estadual</Form.Label>
+              <Form.Control type="text" name="inscricaoEstadual" onChange={handleChange} />
+              <Form.Label>Razão Social</Form.Label>
+              <Form.Control type="text" name="razaoSocial" onChange={handleChange} />
+            </Form.Group>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Header>ENDEREÇO</Card.Header>
+          <Card.Body>
+            <Form.Group>
+              <Form.Label>Logradouro</Form.Label>
+              <Form.Control 
+                type="text" 
+                name="logradouro" 
+                value={endereco.logradouro}
+                onChange={handleChangeEndereco}
+              />
+              <Form.Label>Número</Form.Label>
+              <Form.Control type="text" name="numero" onChange={handleChange} />
+              <Form.Label>Complemento</Form.Label>
+              <Form.Control type="text" name="complemento" onChange={handleChange} />
+              <Form.Label>Bairro</Form.Label>
+              <Form.Control 
+                type="text" 
+                name="bairro" 
+                value={endereco.bairro}
+                onChange={handleChangeEndereco}
+              />
+              <Form.Label>Cidade</Form.Label>
+              <Form.Control 
+                type="text" 
+                name="cidade" 
+                value={endereco.

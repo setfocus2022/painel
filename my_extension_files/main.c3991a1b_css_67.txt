@@ -1,0 +1,18 @@
+ore{content:""}.nc-simple-delete:before{content:""}.nc-simple-remove:before{content:""}.nc-single-02:before{content:""}.nc-single-copy-04:before{content:""}.nc-spaceship:before{content:""}.nc-square-pin:before{content:""}.nc-stre-down:before{content:""}.nc-stre-left:before{content:""}.nc-stre-right:before{content:""}.nc-stre-up:before{content:""}.nc-sun-fog-29:before{content:""}.nc-support-17:before{content:""}.nc-tablet-2:before{content:""}.nc-tag-content:before{content:""}.nc-tap-01:before{content:""}.nc-time-alarm:before{content:""}.nc-tv-2:before{content:""}.nc-umbrella-13:before{content:""}.nc-vector:before{content:""}.nc-watch-time:before{content:""}.nc-zoom-split:before{content:""}.rna-container .alert{border-radius:4px}.rna-container .alert button.close{align-items:center;color:#000;display:flex;justify-content:center}.rna-container .alert button.close span{margin-top:-4px}.sidebar[data-color=black]:after{background:#282828;background:linear-gradient(180deg,#282828 0,hsla(0,0%,7%,.7));background-size:150% 150%}.sidebar .logo-img img{max-height:40px;max-width:40px}@media(max-width:991px){.sidebar .nav>li.active.active-pro{bottom:auto;position:relative}}#bodyClick{position:absolute}
+/*!
+
+=========================================================
+* Light Bootstrap Dashboard React - v2.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/.fixed-plugin .button-container .github-btn{display:inline-block;font-size:14px}.fixed-plugin .SocialMediaSha

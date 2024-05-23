@@ -1,0 +1,61 @@
+&& (
+                  <Button 
+                    variant="danger" 
+                    onClick={() => handleRemoveUnidade(index)}
+                  >
+                    Remover
+                  </Button>
+                )}
+              </div>
+            ))}
+            <Button className="mt-2" onClick={handleAddUnidade} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Unidade</Button>
+          </Card.Body>
+        </Card>
+
+
+      <Card>
+        <Card.Header>SETORES</Card.Header>
+        <Card.Body>
+          {setores.map((setor, index) => (
+            <div key={index} className="mb-4">
+              <Form.Group>
+                <Form.Label>Setor</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={setor}
+                  onChange={(e) => handleSetorChange(e, index)}
+                />
+              </Form.Group>
+              {setores.length > 1 && (
+                <Button 
+                  variant="danger" 
+                  onClick={() => handleRemoveSetor(index)}
+                >
+                  Remover
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button onClick={handleAddSetor} className="mt-2" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Setor</Button>
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>CARGOS</Card.Header>
+        <Card.Body>
+          {cargos.map((cargo, index) => (
+            <div key={index} className="mb-4">
+              <Form.Group>
+                <Form.Label>Cargo</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="cargo"
+                  value={cargo}
+                  onChange={(e) => handleCargoChange(e, index)}
+                />
+              </Form.Group>
+              {cargos.length > 1 && (
+                <Button 
+                  variant="danger" 
+  

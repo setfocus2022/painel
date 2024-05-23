@@ -1,0 +1,88 @@
+00;
+    color: #9A9A9A;
+    margin-bottom: 0px; }
+    .card .category i,
+    .card label i {
+      font-size: 16px; }
+  .card label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase; }
+  .card .title {
+    margin: 0;
+    color: #333333;
+    font-weight: 300; }
+  .card .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px; }
+  .card .description {
+    font-size: 14px;
+    color: #333; }
+  .card .footer {
+    padding: 0;
+    background-color: transparent;
+    line-height: 30px; }
+    .card .footer .legend {
+      padding: 5px 0; }
+    .card .footer hr {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+  .card .stats {
+    color: #a9a9a9; }
+  .card .footer div {
+    display: inline-block; }
+  .card .author {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .card .author i {
+    font-size: 14px; }
+  .card h6 {
+    font-size: 12px;
+    margin: 0; }
+  .card.card-separator:after {
+    height: 100%;
+    right: -15px;
+    top: 0;
+    width: 1px;
+    background-color: #DDDDDD;
+    content: "";
+    position: absolute; }
+  .card .ct-chart {
+    margin: 30px 0 30px;
+    height: 245px; }
+  .card .table tbody td:first-child,
+  .card .table thead th:first-child {
+    padding-left: 15px; }
+  .card .table tbody td:last-child,
+  .card .table thead th:last-child {
+    padding-right: 15px; }
+  .card .alert {
+    border-radius: 4px;
+    position: relative; }
+    .card .alert.alert-with-icon {
+      padding-left: 65px; }
+
+.card-user .image {
+  height: 110px; }
+
+.card-user .image-plain {
+  height: 0;
+  margin-top: 110px; }
+
+.card-user .author {
+  text-align: center;
+  text-transform: none;
+  margin-top: -70px; }
+
+.card-user .avatar {
+  width: 124px;
+  height: 124px;
+  border: 5px solid #FFFFFF;
+  position: relative;
+  margin-bottom: 15px; }
+  .card-user .avatar.border-gray {
+    border-col

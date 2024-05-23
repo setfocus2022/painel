@@ -1,0 +1,59 @@
+contact) => ({
+        id: '', // Se necessário
+        instituicao_id: '', // Se necessário
+        categoria: contact.category,
+        nome_completo: contact.name,
+        telefone: contact.phone,
+      })),
+      unidades: unidades.map((unit) => ({
+        id: '', // Se necessário
+        instituicao_id: '', // Se necessário
+        nome: unit,
+      })),
+      setores: setores.map((setor) => ({
+        id: '', // Se necessário
+        unidade_id: '', // Se necessário
+        nome: setor,
+      })),
+      cargos: cargos.map((cargo) => ({
+        id: '', // Se necessário
+        setor_id: '', // Se necessário
+        nome: cargo,
+      })),
+      usuarios: usuarios.map((user) => ({
+        id: '', // Se necessário
+        cargo_id: '', // Se necessário
+        nome: user.name,
+        identificador: user.identifier,
+        telefone: user.phone, // Assumindo que o telefone é armazenado na propriedade 'phone'
+      })),
+    };
+  
+    try {
+      const response = await axios.post('https://fair-ruby-caterpillar-wig.cyclic.app/nova-instituicao', data);
+  
+      if (response.data.success) {
+        alert('Instituição criada com sucesso!');
+      } else {
+        alert('Erro ao criar instituição!');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Erro ao criar instituição!');
+    }
+  };
+  
+  return (
+    <Container>
+      <h2 style={{ fontSize: "27px", fontWeight: "bold", marginBottom: "20px" }}>Cadastro de Novos Usuários</h2>
+      <Form onSubmit={handleSubmit}> 
+        <Card>
+          <Card.Header>IDENTIFICAÇÃO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Instituição*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="instituicao" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CNPJ*:</Form.Label>
+            <Col md={10}><Form.Control type="text" name="cnpj" onChan

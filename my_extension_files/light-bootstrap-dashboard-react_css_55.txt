@@ -1,0 +1,119 @@
+ore {
+  content: "\ea30"; }
+
+.nc-globe-2::before {
+  content: "\ea31"; }
+
+.nc-grid-45::before {
+  content: "\ea32"; }
+
+.nc-headphones-2::before {
+  content: "\ea33"; }
+
+.nc-html5::before {
+  content: "\ea34"; }
+
+.nc-istanbul::before {
+  content: "\ea35"; }
+
+.nc-key-25::before {
+  content: "\ea36"; }
+
+.nc-layers-3::before {
+  content: "\ea37"; }
+
+.nc-light-3::before {
+  content: "\ea38"; }
+
+.nc-lock-circle-open::before {
+  content: "\ea39"; }
+
+.nc-map-big::before {
+  content: "\ea3a"; }
+
+.nc-mobile::before {
+  content: "\ea3c"; }
+
+.nc-money-coins::before {
+  content: "\ea3b"; }
+
+.nc-note-03::before {
+  content: "\ea3d"; }
+
+.nc-notes::before {
+  content: "\ea3e"; }
+
+.nc-notification-70::before {
+  content: "\ea3f"; }
+
+.nc-palette::before {
+  content: "\ea40"; }
+
+.nc-paper-2::before {
+  content: "\ea41"; }
+
+.nc-pin-3::before {
+  content: "\ea42"; }
+
+.nc-planet::before {
+  content: "\ea43"; }
+
+.nc-preferences-circle-rotate::before {
+  content: "\ea44"; }
+
+.nc-puzzle-10::before {
+  content: "\ea45"; }
+
+.nc-quote::before {
+  content: "\ea46"; }
+
+.nc-refresh-02::before {
+  content: "\ea47"; }
+
+.nc-ruler-pencil::before {
+  content: "\ea48"; }
+
+.nc-satisfied::before {
+  content: "\ea49"; }
+
+.nc-scissors::before {
+  content: "\ea4a"; }
+
+.nc-send::before {
+  content: "\ea4b"; }
+
+.nc-settings-90::before {
+  content: "\ea4c"; }
+
+.nc-settings-gear-64::before {
+  content: "\ea4d"; }
+
+.nc-settings-tool-66::before {
+  content: "\ea4e"; }
+
+.nc-simple-add::before {
+  content: "\ea4f"; }
+
+.nc-simple-delete::before {
+  content: "\ea50"; }
+
+.nc-simple-remove::before {
+  content: "\ea51"; }
+
+.nc-single-02::before {
+  content: "\ea52"; }
+
+.nc-single-copy-04::before {
+  content: "\ea53"; }
+
+.nc-spaceship::before {
+  content: "\ea54"; }
+
+.nc-square-pin::before {
+  content: "\ea55"; }
+
+.nc-stre-down::before {
+  content: "\ea56"; }
+
+.nc-stre-left::before {
+  content: "\ea57"; }

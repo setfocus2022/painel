@@ -1,0 +1,114 @@
+.sidebar {
+  position: fixed;
+  margin: 15px;
+  border-radius: 8px;
+  background-color: #1F1F1F;
+  height: auto;
+
+}
+.hr-custom {
+  border-top: 1px solid #FFFFFF; /* Define the color and size of the horizontal line */
+}
+/* Adjust the logo size here */
+.sidebar-logo {
+  margin-top: 25px;
+  width: 230px; /* Adjust the width as needed */
+  
+}
+
+/* Adicione uma transição suave para os links do menu */
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+
+
+/* Adicione uma transição suave para os links do submenu */
+.submenu li a {
+  transition: all 0.3s ease;
+}
+
+
+/* Adicione uma animação de rotação ao ícone do submenu ao passar o mouse */
+.submenu li a:hover i {
+  transform: rotate(360deg);
+  transition: all 0.5s ease;
+}
+/* Estilo para o submenu quando está expandido */
+.submenu .collapse.show {
+  background-color: #1F1F1F; /* Cor de fundo quando o submenu está expandido */
+}
+
+/* Estilo para os links do submenu quando o submenu está expandido */
+.submenu .collapse.show a {
+  color: #333; /* Cor do texto quando o submenu está expandido */
+}
+
+
+/* Estilo para o submenu quando está expandido */
+.custom-submenu {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #333; /* Cor de fundo quando o submenu está expandido */
+}
+
+.content {
+  background-color: #1F1F1F; /* New background color */
+  /* other styles */
+}
+
+
+/* Adicione isso ao seu arquivo style.modules.css */
+.active-submenu-item {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+.logout-button {
+  width: 80%; /* Reduzir a largura para 80% do seu container */
+  margin: 20px auto; /* Margem superior e inferior de 20px, e auto para as laterais para centralizar */
+  border: none; /* Remover borda */
+  color: white; /* Cor do texto */
+  background-color: #FF7F00; /* Cor de fundo do botão */
+  padding: 10px 0; /* Padding vertical de 10px e horizontal de 0 */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15pt;
+  font-weight: bold;
+  margin-left: 25px;
+  cursor: pointer; /* Cursor de ponteiro */
+  display: block; /* Fazer o botão ser um bloco para ocupar a largura definida */
+  text-align: center; /* Alinhar texto ao centro */
+}
+.logo-img {
+  width: auto;
+  height: auto;
+}
+
+/* Ajustes para garantir que o botão não fique muito largo */
+.nav {
+  width: calc(100% - 30px); /* Reduzir a largura do nav para dar espaço ao padding */
+  margin: 0 15px; /* Espaçamento lateral para o nav */
+}
+
+/* Caso queira adicionar um hover effect para o botão */
+.logout-button:hover {
+  background-color: #e67e22; /* Cor mais escura para o hover */
+}
+@media (max-width: 768px) {
+  .sidebar {
+    
+    
+    margin: 0; /* Remover margem em dispositivos móveis */
+    height: auto; /* Ajustar altura para 100% em dispositivos móveis */
+    border-radius: 0px;
+    
+  }
+  .logout-button {
+    margin-right: 20px;
+  }
+}

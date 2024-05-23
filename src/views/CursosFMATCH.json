@@ -1,0 +1,113 @@
+[
+    {
+        "id": 3,
+        "nome": "Obsolecência Estoques",
+        "descricao": "Entenda como identificar e mitigar os riscos associados à obsolescência de estoques, garantindo a eficiência e a sustentabilidade das operações.",
+        "thumbnail": "https://imgur.com/K8XcWd4.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/3 Obsolecência Estoques.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 4,
+        "nome": "Processo Recebimento Físico de Materiais",
+        "descricao": "Aprenda sobre as etapas críticas no recebimento físico de materiais, incluindo inspeção, registro, e armazenamento, assegurando a acurácia do estoque.",
+        "thumbnail": "https://imgur.com/CMae34w.png",
+        "valor_15d": 1.00,
+        "valor_30d": 520.00,
+        "valor_6m": 1600.00,
+        "caminho_pdf": "../pdf/4 Processo Recebimento Físico de Materiais.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 5,
+        "nome": "Contratos Fornecimentos Impacto nos Estoques",
+        "descricao": "Examine como contratos de fornecimento influenciam a gestão de estoques e aprenda estratégias para otimizar este impacto, equilibrando oferta e demanda.",
+        "thumbnail": "https://imgur.com/hYctD3C.png",
+        "valor_15d": 1.00,
+        "valor_30d": 520.00,
+        "valor_6m": 1600.00,
+        "caminho_pdf": "../pdf/5 Contratos Fornecimentos Impacto nos Estoques.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 6,
+        "nome": "Governança Cadastro Materiais e Forncedores",
+        "descricao": "Descubra a importância de uma governança robusta no cadastro de materiais e fornecedores para a integridade dos dados e a eficiência operacional.",
+        "thumbnail": "https://imgur.com/geZqOGC.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/6 Governança Cadastro Materiais e Forncedores (V.1).pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 2,
+        "nome": "Planejamento Estratégico Estoques MRO - MRP",
+        "descricao": "Este módulo oferece uma visão aprofundada sobre o Planejamento Estratégico de Estoques focado em Manutenção, Reparo e Operações (MRO) e Planejamento de Recursos de Materiais (MRP). Através de estudos de caso, análises de melhores práticas e simulações, os participantes aprenderão a otimizar estoques de MRO, alinhando-os com as demandas de produção e manutenção. O curso aborda técnicas de previsão, gestão de inventário, análise de custo-benefício para a compra e armazenagem de itens MRO, e estratégias para implementação de um sistema MRP eficiente. Ideal para profissionais de suprimentos, operações e logística, este módulo é crucial para quem busca excelência na gestão de estoques e na redução de custos operacionais.",
+        "thumbnail": "https://imgur.com/L4aplVT.png",
+        "valor_15d": 1.00,
+        "valor_30d": 520.00,
+        "valor_6m": 1600.00,
+        "caminho_pdf": "../pdf/2 Planejamento Estratégico Estoques MRO - MRP.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 14,
+        "nome": "Acuracidade de Estoques",
+        "descricao": "Este módulo aborda os conceitos e práticas fundamentais para uma gestão eficiente e precisa dos estoques de materiais de reparo e operação (MRO). Ministrado pelo experiente instrutor Amadeu Rocha, o treinamento explora o princípio da acuracidade de 100% nos estoques como obrigação da gestão de materiais. Os participantes aprenderão sobre a importância da acuracidade nos registros de estoque, bem como a fórmula para sua medição, comparando as quantidades físicas com as registradas no sistema ERP. Além disso, serão apresentados os princípios básicos para entrada e saída de materiais do armazém, garantindo o controle adequado. O curso também aborda aspectos essenciais para um ambiente de armazenagem eficiente, como equipe comprometida e valorizada, organização, sistema de localização simples, identificação correta dos itens e uso de tecnologias. Serão discutidas as possíveis carreiras na área de suprimentos e logística, bem como a importância de treinamento, educação, economia e o programa 8S. Ao final do módulo, os participantes estarão aptos a compreender e aplicar as melhores práticas para a gestão inteligente dos estoques MRO, contribuindo para a redução de desperdícios, aumento da eficiência operacional e atendimento excepcional aos clientes internos",
+        "thumbnail": "https://imgur.com/LWY53dL.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/10 ACURACIDADE ESTOQUES.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 8,
+        "nome": "IQF Qualificação Técnica Estrutural Fornecedores",
+        "descricao": "Este módulo visa capacitar os participantes no processo de avaliação e qualificação técnica de fornecedores, assegurando que estes atendam aos rigorosos requisitos estruturais e de qualidade necessários para a produção e fornecimento de componentes críticos. Através de uma abordagem prática, serão abordados temas como critérios de seleção, análise de capacidade técnica, auditorias de processos, e gestão de riscos, preparando os alunos para identificar e selecionar parceiros estratégicos que garantam a integridade e a confiabilidade dos produtos finais.",
+        "thumbnail": "https://imgur.com/0jHug9J.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/8 IQF QUALIFICAÇÃO TÉCNICA ESTRUTURAL FORNECEDORES.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 9,
+        "nome": "Follow Up",
+        "descricao": "Este módulo é focado no desenvolvimento de habilidades para o eficaz acompanhamento e gestão de fornecedores após a sua qualificação. Os participantes aprenderão técnicas para monitorar o desempenho dos fornecedores, garantindo o cumprimento dos prazos, qualidade, e especificações contratuais. Serão discutidas estratégias para a comunicação efetiva, resolução de problemas, e melhoria contínua, visando fortalecer as relações entre empresa e fornecedor, e assegurar uma cadeia de suprimentos robusta e confiável.",
+        "thumbnail": "https://imgur.com/8FNFt8Y.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/9 Follow Up.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 1,
+        "nome": "Gestão de Inventários Estoques MRO",
+        "descricao": "Este módulo de cursos é projetado para profissionais e estudantes que desejam aprimorar suas habilidades em gestão de inventários e estoques MRO (Manutenção, Reparo e Operações). Abrangendo desde os fundamentos da gestão de estoques até estratégias avançadas de otimização, o curso oferece uma abordagem prática para melhorar a eficiência, reduzir custos e garantir a disponibilidade de itens críticos para as operações. Os participantes aprenderão técnicas de previsão de demanda, gestão de fornecedores, análise de custo-benefício de estoques, além de explorar as melhores práticas e tecnologias emergentes no campo. Ideal para gerentes de operações, supervisores de estoque, e profissionais de compras, este módulo é a chave para dominar a arte da gestão de estoques MRO.",
+        "thumbnail": "https://imgur.com/KF0vBLV.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/1 Gestão de Inventários Estoques MRO.pdf",
+        "valor_10d": 280.00
+      },
+      {
+        "id": 11,
+        "nome": "Gestão de Estoques em Trânsito",
+        "descricao": "Maximize a eficiência e o controle dos estoques móveis em suas operações de campo. Este treinamento aborda estratégias e práticas para gerenciar de forma inteligente os estoques em trânsito, como caminhões oficina, garantindo a disponibilidade adequada de peças, otimizando processos de reposição e controle de estoque, melhorando a mobilidade com tablets para requisições, implementando a gestão de peças usadas para remanufratura e aumentando a segurança nas operações de campo. Aprenda a transformar a gestão de estoques em trânsito, impulsionando a melhoria contínua e a eficiência operacional em suas atividades críticas.",
+        "thumbnail": "https://imgur.com/zSIvnQ3.png",
+        "valor_15d": 1.00,
+        "valor_30d": 360.00,
+        "valor_6m": 1200.00,
+        "caminho_pdf": "../pdf/11 Gestão Estoques em Trânsito.pdf",
+        "valor_10d": 280.00
+      }
+
+]

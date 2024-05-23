@@ -1,0 +1,46 @@
+
+      </div>
+
+      {selectedUser !== null && (
+        <Row className="mb-4">
+          <Col>
+            <Table responsive bordered>
+              <tbody>
+                {columns.map((column, colIndex) => (
+                  <tr key={colIndex}>
+                    <th>{column}</th>
+                    <td>
+                      {editIndex === selectedUser ? (
+                        <Form.Control
+                          type="text"
+                          value={editData[column] || ''}
+                          onChange={e => handleChange(e, column)}
+                        />
+                      ) : (
+                        usuarios[selectedUser][column]
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            {editIndex === selectedUser ? (
+              <div>
+                <Button variant="success" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }} onClick={handleSave}>Save</Button>
+                <Button variant="warning" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }} onClick={handleCancel}>Cancel</Button>
+              </div>
+            ) : (
+              <div>
+                <Button variant="primary" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }} onClick={() => handleEdit(selectedUser)}>Edit</Button>
+                <Button variant="danger" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }} onClick={() => handleDelete(usuarios[selectedUser].id)}>Delete</Button>
+              </div>
+            )}
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+};
+
+export default NR2;
+

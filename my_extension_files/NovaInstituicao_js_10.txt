@@ -1,0 +1,55 @@
+tor} className="mt-2" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Setor</Button>
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>CARGOS</Card.Header>
+        <Card.Body>
+          {cargos.map((cargo, index) => (
+            <div key={index} className="mb-4">
+              <Form.Group>
+                <Form.Label>Cargo</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="cargo"
+                  value={cargo}
+                  onChange={(e) => handleCargoChange(e, index)}
+                />
+              </Form.Group>
+              {cargos.length > 1 && (
+                <Button 
+                  variant="danger" 
+                  onClick={() => handleRemoveCargo(index)}
+                  className="mb-2"
+                >
+                  Remover
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button onClick={handleAddCargo} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Cargo</Button>
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>USUÁRIOS</Card.Header>
+          <Card.Body>
+              {usuarios.map((usuario, index) => (
+                  <div key={index} className="mb-4">
+                      <Form.Group>
+                          <Form.Label>Nome</Form.Label>
+                          <Form.Control
+                              type="text"
+                              name="nome"
+                              value={usuario.nome}
+                              onChange={(e) => handleChange(e, 'usuarios', index)}
+                          />
+                      </Form.Group>
+                      <Form.Group>
+                          <Form.Label>Identificador (CPF ou E-Mail)</Form.Label>
+                          <Form.Control
+                              type="text"
+                              name="identificador"
+ 

@@ -1,0 +1,62 @@
+--- FILENAME: TodosProgramas.js
+import React, { useState } from 'react';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
+
+const TodosProgramas = () => {
+  const [nome_programa, setNomePrograma] = useState('');
+  const [link_form, setLinkForm] = useState('');
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const instituicaoNome = localStorage.getItem('instituicaoNome');
+
+    const programDetails = {
+      nome_programa: nome_programa,
+      link_form: link_form,
+      instituicaoNome: instituicaoNome
+    };
+    
+  
+    // Enviar os detalhes para a API de back-end
+    axios.post('https://fair-ruby-caterpillar-wig.cyclic.app/programas', programDetails)
+      .then((response) => {
+        alert('Programa criado com sucesso!');
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Erro ao criar programa. Tente novamente.');
+      });
+  };
+  
+
+  return (
+    <Container>
+      <h1>Criar Programa</h1>
+      <Form onSubmit={handleSubmit}>
+        <Row>
+          <Col>
+            <Form.Group className="mb-3">
+              <Form.Label>Nome do Programa:</Form.Label>
+              <Form.Control type="text" value={nome_programa} onChange={(e) => setNomePrograma(e.target.value)} />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group className="mb-3">
+              <Form.Label>Link do Form.:</Form.Label>
+              <Form.Control type="text" value={link_form} onChange={(e) => setLinkForm(e.target.value)} />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Button variant="primary" type="submit">
+          Adicionar Programa
+        </Button>
+      </Form>
+    </Container>
+  );
+};
+
+export default TodosProgramas;
+

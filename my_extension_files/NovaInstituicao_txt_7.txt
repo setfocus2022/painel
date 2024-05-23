@@ -1,0 +1,48 @@
+
+                  {contato.categoria === "Especifique" && (
+                    <div className="mt-2">
+                      <Form.Label>Especifique a Categoria</Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="categoriaEspecifica"
+                        placeholder="Digite a categoria"
+                        onChange={(e) => handleChange(e, index)}
+                        value={contato.categoriaEspecifica}
+                      />
+                    </div>
+                  )}
+                  <Form.Label className="mt-2">Nome Completo</Form.Label>
+                  <Form.Control type="text" name="nomeCompleto" onChange={(e) => handleChange(e, index)} />
+                  <Form.Label className="mt-2">Telefone</Form.Label>
+                  <Form.Control type="text" name="telefone" onChange={(e) => handleChange(e, index)}/>
+                </Form.Group>
+                {contatos.length > 1 && (
+                  <Button 
+                    variant="danger" 
+                    onClick={() => handleRemoveContato(index)}
+                    className="mb-2"
+                  >
+                    Remover
+                  </Button>
+                )}
+              </div>
+            ))}
+            <Button onClick={handleAddContato} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Contato</Button>
+          </Card.Body>
+        </Card>
+
+
+        <Card>
+          <Card.Header>UNIDADES</Card.Header>
+          <Card.Body>
+            {unidades.map((unidade, index) => (
+              <div key={index}>
+                <Form.Group>
+                  <Form.Label>Unidade</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={unidade}
+                    onChange={(e) => handleUnidadeChange(e, index)}
+                  />
+                </Form.Group>
+                {unidades.length > 1 

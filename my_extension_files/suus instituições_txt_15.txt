@@ -1,0 +1,5 @@
+arecer uma coluna clicavel que  ira puxar esse link do zoho forms fornecido pelo usuario e deve incluir no final do link essas 4 variaveis ( Date deve puxar a data atual, exemplo: 08/08/2023 ) e redirecionar o usuario em uma nova aba.
+
+prompt teste: uma informação para contexto, quando o usuario estiver logado e na pagina PainelUsuario.js e clicar nessa coluna clicavel que redireciona ao formulario do zoho forms com as variaveis formatadas no link do form , essas variaveis devem ser puxadas da tabela 'cadastro_clientes' , verificar qual usuario esta logado no sistema pelo "nome:"
+
+prompt: vamos melhorar a logica dessa segunda parte, a função deve puxar os dados de "Name" , "CPF", "Instituição" da tabela 'cadastro_clientes' e a variavel Date deve puxar a data atual no formato , exemplo, '08/08/2023' e incluir no link do form. Crie o codigo da pagina PainelUsuario.js , ela deve conter o titulo grande "Seja Bem-Vindo(a) !" e abaixo um subtitulo medio "Avaliações Disponiveis:". a logica dessa pagina PainelUsuario é se o usuario logado tiver

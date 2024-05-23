@@ -1,0 +1,53 @@
+--- FILENAME: GerenciamentoUsuario.js
+import React, { useState, useEffect } from 'react';
+import { Table, Button, Form, Container, Row, Col , Pagination} from 'react-bootstrap';
+import axios from 'axios';
+import './NR2.css'; 
+
+const NR2 = () => {
+  const [usuarios, setUsuarios] = useState([]);
+  const [editIndex, setEditIndex] = useState(-1);
+  const [editData, setEditData] = useState({});
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1); // Added for pagination
+  const itemsPerPage = 5; // Added for pagination
+
+  // Pagination logic
+  const totalPages = Math.ceil(usuarios.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = usuarios.slice(indexOfFirstItem, indexOfLastItem);
+
+  const columns = [
+    'name', 'surname', 'email', 'birthDate', 'gender', 'phone', 'phone2', 'cpf', 'cnpj',
+    'registration', 'obs', 'address', 'number', 'complement', 'district', 'city', 'state',
+    'country', 'zipCode', 'unit', 'sector', 'role', 'institution', 'accessRecovery', 'access'
+  ];
+
+
+  
+  useEffect(() => {
+    carregarUsuarios();
+  }, []);
+
+  const carregarUsuarios = () => {
+    // Retrieve the institution name from localStorage
+    const instituicaoNome = localStorage.getItem('instituicaoNome');
+
+    // Make API request with the institution name as a parameter
+    axios.get(`https://fair-ruby-caterpillar-wig.cyclic.app/usuarios?instituicaoNome=${instituicaoNome}`)
+    .then(response => {
+        if (response.data && Array.isArray(response.data)) {
+            setUsuarios(response.data);
+        } else {
+            console.error("Unexpected data format:", response.data);
+        }
+    })
+    .catch(error => {
+        console.error("API Error:", error);
+    });
+  };
+  const handleEdit = (index) => {
+    setEditIndex(index);
+    setEditData(usuarios[index]);
+  };

@@ -1,0 +1,79 @@
+.user-profile-container {
+    padding: 0px; /* Espaçamento ao redor do container */
+}
+
+
+.profile-edit,
+.profile-user {
+    background-color: #69717A; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+    margin: 0 15px; /* Margem lateral para centralizar e dar espaço */
+}
+
+.profile-title {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.btn-suus {
+    margin-top: 20px;
+    background-color: #FF9933;
+    border: none;
+}
+.profile-edit {
+    flex: 1; /* Ocupar o espaço disponível */
+    min-width: 300px; /* Largura mínima */
+}
+
+.profile-user {
+    width: 250px; /* Largura fixa */
+    height: 250px; /* Altura fixa */
+    text-align: center; /* Centralizar o conteúdo */
+    align-self: flex-start; /* Alinhar ao topo */
+}
+
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+}
+@media (max-width: 768px) {
+    .profile-edit,
+    .profile-user {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .user-profile-container {
+      padding: 10px;
+    }
+
+    /* Estilos para os elementos do formulário em telas pequenas */
+    .profile-edit .form-group {
+        margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+    }
+
+    .profile-edit .form-control {
+        width: 100%; /* Faz o input ocupar a largura total */
+    }
+
+    .btn-suus {
+        width: 100%; /* Faz o botão ocupar a largura total */
+    }
+}
+
+/* Estilos para os elementos do formulário em telas maiores */
+.profile-edit .form-group {
+    margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+.profile-edit .form-control {
+    width: 100%; /* Faz o input ocupar a largura total */
+}
+
+.btn-suus {
+    width: 100%; /* Faz o botão ocupar a largura total */
+}

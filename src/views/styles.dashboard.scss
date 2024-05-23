@@ -1,0 +1,53 @@
+@import "~bootstrap/scss/bootstrap";
+
+.back-prof {
+  background-color: #E9E9E9;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center; /* Alinhar texto à esquerda */
+  font-family: 'Montserrat'; /* Mudar a fonte (exemplo com Arial) */
+  
+}
+.card-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  background-color: #f5f7fa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+  margin: 25px;
+  width: 250px;
+  height: 350px;
+
+}
+.coluna-estatica {
+  border-radius: 5px; /* Mesmo raio de borda que .back-prof */
+  background-color: #f5f7fa; /* Cor de fundo */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra */
+  border: none; /* Sem borda */
+  padding: 35px;
+}
+
+.card-stats {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+ 
+}
+
+.text-center {
+  color: black;
+  margin-top: 15px;
+  font-family: 'montserrat';
+ 
+}
+
+.table {
+  color: #333;
+}
+.tittle {
+  color: black;
+}
+  

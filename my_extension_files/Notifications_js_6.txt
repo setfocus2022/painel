@@ -1,0 +1,34 @@
+e="modal-profile">
+              <i className="nc-icon nc-bulb-63"></i>
+            </div>
+          </Modal.Header>
+          <Modal.Body className="text-center">
+            <p>Always have an access to your profile</p>
+          </Modal.Body>
+          <div className="modal-footer">
+            <Button
+              className="btn-simple"
+              type="button"
+              variant="link"
+              onClick={() => setShowModal(false)}
+            >
+              Back
+            </Button>
+            <Button
+              className="btn-simple"
+              type="button"
+              variant="link"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </Button>
+          </div>
+        </Modal>
+        {/* End Modal */}
+      </Container>
+    </>
+  );
+}
+
+export default Notifications;
+

@@ -1,0 +1,47 @@
+ow}>
+              <Form.Label column md={2}>Estado*:</Form.Label>
+              <Col md={10}>
+                <Form.Control as="select" name="state" value={formData.state} onChange={handleChange} required>
+                  <option value="">Selecione um estado</option>
+                  {estados.map(estado => (
+                    <option key={estado} value={estado}>{estado}</option>
+                  ))}
+                </Form.Control>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>País*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="country" value={formData.country} onChange={handleChange} disabled required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CEP*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required/></Col>
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>
+            CONTATOS
+            <span style={{ cursor: 'pointer', float: 'right' }} onClick={addContact}>ADICIONAR</span>
+          </Card.Header>
+          <Card.Body>
+          {formData.contacts.map((contact, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Categoria:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    as="select"
+                    name="category"
+                    value={contact.category}
+                    onChange={(e) => handleContactChange(e, index)}
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </Form.Control>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <F

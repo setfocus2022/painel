@@ -1,0 +1,45 @@
+                             placeholder="CPF ou E-Mail"
+                              value={usuario.identificador}
+                              onChange={(e) => handleChange(e, 'usuarios', index)}
+                          />
+                      <Form.Group>
+                        <Form.Label>Senha</Form.Label>
+                        <Form.Control
+                          type="password"
+                          name="senha"
+                          value={usuario.senha}
+                          onChange={(e) => handleChange(e, 'usuarios', index, 'senha')}
+                        />
+                      </Form.Group>
+
+                      </Form.Group>
+                      {usuarios.length > 1 && (
+                          <Button 
+                              variant="danger" 
+                              onClick={() => handleRemoveUsuario(index)}
+                              className="mb-2"
+                          >
+                              Remover
+                          </Button>
+                      )}
+                  </div>
+              ))}
+              <Button onClick={handleAddUsuario} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Usuário</Button>
+          </Card.Body>
+      </Card>
+
+      {notification && (
+      <Alert variant={notification.type}>
+        {notification.message}
+      </Alert>
+    )}                 
+
+
+        <Button type="submit" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Registrar Instituição</Button>
+      </Form>
+    </Container>
+  );
+};
+
+export default NovaInstituicao;
+

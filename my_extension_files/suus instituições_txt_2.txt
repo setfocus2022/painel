@@ -1,0 +1,18 @@
+licar ele deve adicionar outra coluna dentro dessa coluna SETORES com outro campo SETOR, isso é devido caso o usuario queria adicionar mais setores. Em CARGOS ele precisa ter o seguinte campo de formulario: CARGO: , essa coluna CARGOS deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna CARGOS com outro campo CARGO, isso é devido caso o usuario queria adicionar mais cargos. Em USUÁRIOS ele precisa ter os seguintes campos de formulario: NOME: , IDENTIFICADOR: (deve ser preenchido por um CPF VALIDO ou um EMAIL valido ) essa coluna USUÁRIOS deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna USUÁRIOS com outros campos NOME: e IDENTIFICADOR:, isso é devido caso o usuario queria adicionar mais usuarios. no fim deve conter um botão salvar onde ele deve chamar o meu endpoint "https://fair-ruby-caterpillar-wig.cyclic.app/nova-instituicao" , para mais detalhes desse meu endpoint estou anexando o arquivo Server.js que é o meu servidor NODE JS. esse é um exemplo de pagina react do meu projeto fazendo algumas importações : "import React, { useState , useEffect } from 'react';
+import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
+import './NovaInstituicao.scss';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+
+
+const NovaInstituicao = () => {
+}
+
+export default NovaInstituicao;"
+
+prompt : crie agora para essa coluna: em ENDEREÇO ele precisa ter os seguintes campos de formularios: LOGRADOURO: , NÚMERO: , COMPLEMENTO: , BAIRRO: , CIDADE:, ESTADO: , PAÍS:, CEP: ( Se for fornecido um cep valido, deve preencher os demais campos com o endereço correspondente ).
+
+
+
+import React, { useState , useEffect } from 'react';
+import { Form, Button, Card, Container, Col, Row } fr

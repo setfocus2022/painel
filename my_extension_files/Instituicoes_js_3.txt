@@ -1,0 +1,19 @@
+/>
+                      </Button>
+                      <Button variant="light" onClick={handleRedirect}>
+                        <img src="https://imgur.com/eIhi3oc.png" alt="Ir para NR2" width="24" height="24" />
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
+export default NR3;
+

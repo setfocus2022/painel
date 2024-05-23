@@ -1,0 +1,66 @@
+st [usuarios, setUsuarios] = useState([{ nome: '', identificador: '' }]);
+
+  const handleAddUsuario = () => {
+    setUsuarios([...usuarios, { nome: '', identificador: '' }]);
+  };
+  
+  const handleUsuarioChange = (e, index, field) => {
+    const updatedUsuarios = [...usuarios];
+    updatedUsuarios[index][field] = e.target.value;
+    setUsuarios(updatedUsuarios);
+  };
+  
+  const isValidEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+  };
+  
+  const isValidCPF = (cpf) => {
+    // Aqui, você pode adicionar uma expressão regular ou lógica para validar o CPF.
+    // Para simplificar, vou usar uma expressão regular básica apenas para formatos de CPF.
+    const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+    return regex.test(cpf);
+  };
+
+  const handleRemoveContato = (index) => {
+    const updatedContatos = [...contatos];
+    updatedContatos.splice(index, 1);
+    setContatos(updatedContatos);
+  };
+  
+  const handleRemoveUnidade = (index) => {
+    const updatedUnidades = [...unidades];
+    updatedUnidades.splice(index, 1);
+    setUnidades(updatedUnidades);
+  };
+  
+  const handleRemoveSetor = (index) => {
+    const updatedSetores = [...setores];
+    updatedSetores.splice(index, 1);
+    setSetores(updatedSetores);
+  };
+  
+  const handleRemoveCargo = (index) => {
+    const updatedCargos = [...cargos];
+    updatedCargos.splice(index, 1);
+    setCargos(updatedCargos);
+  };
+  
+  const handleRemoveUsuario = (index) => {
+    const updatedUsuarios = [...usuarios];
+    updatedUsuarios.splice(index, 1);
+    setUsuarios(updatedUsuarios);
+  };
+  
+  const [isCNPJValid, setIsCNPJValid] = useState(true);
+
+  // Função para lidar com a mudança do CNPJ
+  const handleCNPJChange = (e) => {
+    const value = e.target.value;
+    const valid = isValidCNPJ(value);
+    setIsCNPJValid(valid);
+
+    // Atualize o estado do CNPJ aqui, se necessário
+  };
+
+  const handleSubmi

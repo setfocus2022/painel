@@ -1,0 +1,136 @@
+/* General styles */
+.login-container {
+  min-height: 100vh; /* Full screen height */
+  background-color: #1F1F1F; /* Dark blue background */
+}
+
+
+/* Grid and responsive adjustments */
+.row {
+  height: 100%;
+}
+
+.login-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-wrapper {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button {
+  background-color: white; /* Orange color */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  padding: 0.5rem 1rem; /* Padding for the button */
+  margin-top: 1rem; /* Space above the button */
+  transition: background-color 0.2s; /* Smooth background color transition */
+  width: 250px;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #cc6600; /* Darker orange on hover */
+}
+
+.logologin {
+  max-width: 50%;
+  height: auto;
+  
+}
+
+.login-wrapper {
+  width: 100%;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15pt;
+  margin-bottom: -10px;
+  color: white;
+}
+
+.primeiroacesso {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15pt; /* Adjust the font size if needed */
+  color: white;
+  margin: 25px; /* Set the margin to 25px on all sides */
+  text-align: center; /* Center the text */
+  width: calc(100% - 50px); 
+ 
+}
+
+.login-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20pt;
+  margin-top: 50px;
+
+  color: white;
+}
+
+.login-form {
+  max-width: 620px;
+  margin: auto;
+}
+.coluna-imagem {
+  background-image: url('https://imgur.com/janbOnj.png');
+  background-size: cover;
+  background-position: center;
+ 
+
+}
+.forgot-password-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 15pt;
+  color:white;
+}
+.forgot-password-link:hover, .forgot-password-link:focus {
+  color: black; /* Define a cor do texto para branco */
+  text-decoration: none; /* Opcional: remove o sublinhado ao passar o mouse ou focar */
+}
+.login-img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover; /* Cover the entire div without stretching */
+}
+@media (min-height: 769px){
+  .coluna-imagem {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+
+  .login-img {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .login-section-wrapper {
+    margin: 0 auto; /* Center the login section on small screens */
+  }
+
+  .brand-wrapper {
+    margin-top: 15px; /* Set the margin-top to 15px on mobile screens */
+    margin-bottom: 15px; /* Ensure there is space between the logo and the title */
+  }
+
+  .login-title {
+    /* Ensure that the title doesn't have a margin-top that pushes it down */
+    margin-top: 0;
+  }
+}

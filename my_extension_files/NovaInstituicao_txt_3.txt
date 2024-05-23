@@ -1,0 +1,73 @@
+gla: "RO", nome: "Rondônia" },
+    { sigla: "RR", nome: "Roraima" },
+    { sigla: "SC", nome: "Santa Catarina" },
+    { sigla: "SP", nome: "São Paulo" },
+    { sigla: "SE", nome: "Sergipe" },
+    { sigla: "TO", nome: "Tocantins" }
+];
+
+
+  const handleCepChange = async (e) => {
+    const cep = e.target.value.replace('-', '');
+
+    setEndereco(prevState => ({
+      ...prevState,
+      cep: cep,
+    }));
+
+    // Validação do CEP
+    if (cep.length === 8) {
+        // Você pode usar uma API como ViaCEP ou similar para buscar o endereço
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const enderecoData = await response.json();
+
+        if (!enderecoData.erro) {
+            setEndereco({
+                cep: enderecoData.cep,
+                logradouro: enderecoData.logradouro,
+                bairro: enderecoData.bairro,
+                cidade: enderecoData.localidade,
+                estado: enderecoData.uf,
+                pais: 'Brasil'
+            });
+        } else {
+            // Trate o erro aqui (CEP inválido ou não encontrado)
+            console.error('CEP inválido ou não encontrado');
+        }
+    }
+};
+  
+
+  const handleAddContato = () => {
+    setContatos([...contatos, {
+      categoria: '',
+      nomeCompleto: '',
+      telefone: '',
+      categoriaEspecifica: ''
+    }]);
+  };
+
+  const [setores, setSetores] = useState(['']);
+  const [cargos, setCargos] = useState(['']);
+
+  const handleAddSetor = () => {
+    setSetores([...setores, '']);
+  };
+  
+  const handleSetorChange = (e, index) => {
+    const updatedSetores = [...setores];
+    updatedSetores[index] = e.target.value;
+    setSetores(updatedSetores);
+  };
+  
+  const handleAddCargo = () => {
+    setCargos([...cargos, '']);
+  };
+  
+  const handleCargoChange = (e, index) => {
+    const updatedCargos = [...cargos];
+    updatedCargos[index] = e.target.value;
+    setCargos(updatedCargos);
+  };
+  
+  con

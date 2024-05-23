@@ -1,0 +1,59 @@
+y={index}>
+            
+              <tr>
+                <td className="detail-cell">Unidade</td>
+                <td className="detail-cell">{unidade.unidade}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Instituição</td>
+                <td className="detail-cell">{unidade.instituicaoNome}</td>
+              </tr>
+            </React.Fragment>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+  
+  const renderUsuariosDetails = () => {
+    if (!detalhesInstituicao || !detalhesInstituicao.usuarios) return null;
+  
+    return (
+      <Table responsive bordered className="usuarios-details-table mb-4">
+        <tbody>
+          {detalhesInstituicao.usuarios.map((usuario, index) => (
+            <React.Fragment key={index}>
+              
+              <tr>
+                <td className="detail-cell">Nome</td>
+                <td className="detail-cell">{usuario.nome}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Identificador</td>
+                <td className="detail-cell">{usuario.identificador}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Senha</td>
+                <td className="detail-cell">{usuario.senha}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Acesso</td>
+                <td className="detail-cell">{usuario.acesso}</td>
+              </tr>
+              <tr>
+                <td className="detail-cell">Instituição</td>
+                <td className="detail-cell">{usuario.instituicaoNome}</td>
+              </tr>
+            </React.Fragment>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+  
+  
+  // Pagination logic
+  const totalPages = Math.ceil(instituicoes.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems 

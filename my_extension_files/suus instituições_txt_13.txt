@@ -1,0 +1,49 @@
+={(e) => handleUserChange(e, index, 'name')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Identificador:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="identifier"
+                    value={user.identifier}
+                    placeholder="CPF ou E-Mail"
+                    onChange={(e) => handleUserChange(e, index, 'identifier')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeUser(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+        </Card.Body>
+      </Card>
+
+
+
+
+        <Button type="submit" variant="primary" className="mt-3">Salvar</Button>
+      </Form>
+    </Container>
+  );
+}
+
+export default NRs;
+
+poderia criar um formulario de cadastro de instituições em react? preciso que separe em colunas: Nova_Instituicao ( Colunas: instituicao, cnpj, inscricao_estadual, razao_social, logradouro, numero, complemento, bairro, cidade, estado, cep ) ; Contatos ( Colunas: categoria (--SELECIONE--; Administrativo; Cobrança; Tecnico; Especifique..), nome_completo e telefone ) ; Unidades ( Colunas: id, instituicao_id e nome ) ; Setores ( Colunas: id, instituicao_id e nome) ;  Cargos  ( Colunas: id, instituicao_id e nome) ; Usuarios ( Colunas: nome, identificador(CPF ou Email) e Telefone ).
+
+
+instituicao; cnpj; inscricaoEstadual ; razaoSocial; logradouro; numero; complemento; bairro; cidade; estado; pais; cep; CL: Instituicoes 
+
+categoria; categoriaEspecifica; nomeCompleto; telefone; CL: Contatos
+
+unidade; CL: Unidades
+setor; CL: Setores
+cargo; CL: Cargos
+nome; identificador; CL:

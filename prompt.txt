@@ -1,0 +1,374 @@
+Preciso salvar os dados dessa api tambem para a tabela 'historico' ( historico
+compra_id
+int4
+curso_id
+int4
+data_aprovacao
+timestamp
+data_compra
+timestamp
+data_conclusao
+timestamp
+id
+int4
+periodo
+varchar
+status
+varchar
+status_progresso
+varchar
+user_id
+int4
+valor_pago
+numeric '). a api que preciso que talvez faça o salvamento dos dados é essa: "app.post("/api/pagamento/notificacao", async (req, res) => {
+  const { data } = req.body;
+
+  try {
+    const payment = await mercadopago.payment.findById(data.id);
+    const externalReference = payment.body.external_reference;
+    const compraIds = externalReference.split('-'); // Divide o external_reference nos IDs das compras
+    const paymentStatus = payment.body.status; // Status do pagamento
+
+    // Processa cada ID de compra baseado no status do pagamento
+    await Promise.all(compraIds.map(async compraId => {
+      const newStatus = paymentStatus === 'approved' ? 'aprovado' : 'reprovado'; // Atualiza o status baseado no status do pagamento
+      await pool.query('UPDATE compras_cursos SET status = $1 WHERE id = $2', [newStatus, compraId]);
+    }));
+
+    res.send("Notificação processada com sucesso.");
+  } catch (error) {
+    console.error("Erro ao processar notificação:", error);
+    res.status(500).send("Erro interno do servidor");
+  }
+});". Resumindo o funcionamento: Preciso que ao pagamento retornar 'aprovado' ele tambem salve os mesmos dados que ele salva em 'compras_cursos' em 'historico' 
+
+
+
+progresso_cursos
+acessos_pos_conclusao
+int4
+curso_id
+int4
+id
+int4
+progresso
+numeric
+status
+varchar
+time_certificado
+timestamptz
+user_id
+int4
+
+compras_cursos
+created_at
+timestamp
+curso_id
+int4
+data_compra
+timestamp
+data_fim_acesso
+timestamp
+data_inicio_acesso
+timestamp
+id
+int4
+periodo
+varchar
+status
+varchar
+user_id
+int4
+
+historico
+compra_id
+int4
+curso_id
+int4
+data_aprovacao
+timestamp
+data_compra
+timestamp
+data_conclusao
+timestamp
+id
+int4
+periodo
+varchar
+status
+varchar
+status_progresso
+varchar
+user_id
+int4
+valor_pago
+numeric
+
+Precisariamos de uma maquina mediana ( considerado com as maquina mais potentes que temos hoje no mercado ) : 
+Placa mae: Placa Mãe Gigabyte B660M AORUS PRO DDR4 (LGA 1700/DDR4/HDMI/DisplayPort/M.2 Nvme/USB 3.2/USB-C/2.5Gbe)
+Processador: Processador Intel I7-12700KF, 3.6GHz (5.0GHz Max Turbo), Cache 25MB, Dual Core, 20 Threads, LGA 1700 - BX8071512700KF
+Memória RAM: 32GB 
+Cooler: 
+Fonte: EVGA 220-G5-0650-X1 Super Nova 650 G5, 80 Plus Gold 650W, totalmente modular, modo ECO com ventilador Fdb, 10 anos de garantia, tamanho compacto de 150 mm, fonte de alimentação
+Placa de vídeo: Placa de Vídeo RTX 2060 Duex NVIDIA GeForce, GDDR6 - RTX2060-6GD6
+Armazenamento: SSD com espaço de 240gb ja é suficiente
+
+https://www.terabyteshop.com.br/produto/24645/cooler-para-processador-cooler-master-hyper-212-spectrum-v3-intel-amd-rgb-black-rr-s4na-17pa-r1?gad_source=1
+
+https://www.epocaeletro.com.br/?product=kit-memoria-pc-32gb-2x16gb-ddr4-3200mhz-pro-gaming-crucial&gad_source=1
+
+https://www.kabum.com.br/produto/270887/processador-intel-i7-12700kf-3-6ghz-5-0ghz-max-turbo-cache-25mb-dual-core-20-threads-lga-1700-bx8071512700kf?gad_source=1
+
+
+https://www.amazon.com.br/EVGA-220-G5-0650-X1-650-G5-alimenta%C3%A7%C3%A3o/dp/B07WDLTKNM
+
+https://www.kabum.com.br/produto/404587/placa-de-video-rtx-2060-duex-nvidia-geforce-gddr6-rtx2060-6gd6?gad_source=1
+
+Total estimado: 6.144,51
+
+
+
+preciso adicionar uma nova coluna na tabela 'users' com o nome 'empresa', forneça o codigo sql para isso. Estrutura do banco de dados: "users
+cep
+varchar
+cidade
+varchar
+cod_rec
+varchar
+email
+varchar
+endereco
+varchar
+id
+int4
+nome
+varchar
+pais
+varchar
+role
+varchar
+senha
+varchar
+sobrenome
+varchar
+username
+varchar"
+Inclua no arquivo "NovoAluno.js" uma nova coluna no formulario dentro do modal para o campo "empresa". Analise a rota do backend em "Server.js" para alteração tambem.
+
+
+ aulas
+curso_id
+int4
+descricao
+text
+id
+int4
+nome
+varchar
+url_video
+text
+
+ avaliacoes
+curso_id
+int4
+id
+int4
+opcoes
+jsonb
+pergunta
+text
+resposta_correta
+bpchar
+
+ compras_cursos
+created_at
+timestamp
+curso_id
+int4
+data_compra
+timestamp
+data_fim_acesso
+timestamp
+data_inicio_acesso
+timestamp
+id
+int4
+link_checkout
+varchar
+periodo
+varchar
+status
+varchar
+user_id
+int4
+
+ cursos
+caminho_pdf
+varchar
+descricao
+text
+id
+int4
+nome
+varchar
+thumbnail
+varchar
+valor_10d
+numeric
+valor_15d
+numeric
+valor_30d
+numeric
+valor_6m
+numeric
+
+ historico
+cod_indent
+varchar
+compra_id
+int4
+curso_id
+int4
+data_aprovacao
+timestamp
+data_compra
+timestamp
+data_conclusao
+timestamp
+id
+int4
+periodo
+varchar
+status
+varchar
+status_progresso
+varchar
+user_id
+int4
+valor_pago
+numeric
+
+ progresso_cursos
+acessos_pos_conclusao
+int4
+cod_indent
+varchar
+curso_id
+int4
+id
+int4
+
+progresso
+numeric
+status
+varchar
+time_certificado
+timestamptz
+user_id
+int4
+
+ users
+cep
+varchar
+cidade
+varchar
+cod_rec
+varchar
+email
+varchar
+empresa
+varchar
+endereco
+varchar
+id
+int4
+nome
+varchar
+pais
+varchar
+role
+varchar
+senha
+varchar
+sobrenome
+varchar
+username
+varchar
+
+Perfeito,quero que analise meu codigo atual de "CursosEmpresas.js" pois criei uma logica onde ao clicar em "Comprar Cursos" ele redirecione o usuario para o checkout do mercado pago e preciso remover as partes que não fazem sentido com a logica geral do  da função "handleSubmit" pois quero enviar para o checkout do mercado pago o nome do curso que o usuario selecionou anteriormente ( caso ele não tenha selecionado nenhum curso o botão "Comprar Cursos" deve ficar bloqueado de ser clicado ) e o "Total da Compra" que deu ao usuario ter selecionado os cursos na tabela. Preciso que em userId ele carregue os dados da empresa logada, pois preciso que ele envie um "userId" . analise o backend caso for preciso criar outra rota especifica para essa alteração: 
+server.js
+19380 Tokens
+
+
+estou com esse erro ao tentar excluir um usuario no meu arquivo AlunoEmpresa.js. ele retorna esse erro no backend: " Erro ao excluir aluno: error: update or delete on table "users" violates foreign key constraint "historico_user_id_fkey" on table "historico"
+at /var/task/node_modules/pg/lib/client.js:526:17
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async /var/task/server.js:1122:5 {
+length: 282,
+severity: 'ERROR',
+code: '23503',
+detail: 'Key (id)=(65) is still referenced from table "historico".',
+hint: undefined,
+position: undefined,
+internalPosition: undefined,
+internalQuery: undefined,
+where: undefined,
+schema: 'public',
+table: 'historico',
+column: undefined,
+dataType: undefined,
+constraint: 'historico_user_id_fkey',
+file: 'ri_triggers.c',
+line: '2609',
+routine: 'ri_ReportViolation'
+}" minha estrutura do banco de dados da tabela 'users': " users
+cep
+varchar
+cidade
+varchar
+cod_rec
+varchar
+email
+varchar
+empresa
+varchar
+endereco
+varchar
+id
+int4
+nome
+varchar
+pais
+varchar
+role
+varchar
+senha
+varchar
+sobrenome
+varchar
+username
+varchar", 'tabela 'historico': "historico
+compra_id
+int4
+curso_id
+int4
+data_aprovacao
+timestamp
+data_compra
+timestamp
+data_conclusao
+timestamp
+id
+int4
+periodo
+varchar
+status
+varchar
+status_progresso
+varchar
+user_id
+int4
+valor_pago
+numeric"
+
+Você é um desenvolvedor senior com conhecimentos avançados em react, nodejs e estrutura de banco e dados PostgreSQL. Você é desenvolvedor da plataforma de cursos FMATCH. Você ira auxiliar no desenvolvimento do codigo de funções e logica que for requisitado

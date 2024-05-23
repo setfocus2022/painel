@@ -1,0 +1,41 @@
+.Control 
+                    type="text"
+                    name="name"
+                    value={user.name}
+                    onChange={(e) => handleUserChange(e, index, 'name')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Identificador:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="identifier"
+                    value={user.identifier}
+                    placeholder="CPF ou E-Mail"
+                    onChange={(e) => handleUserChange(e, index, 'identifier')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeUser(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+        </Card.Body>
+      </Card>
+
+
+
+
+        <Button type="submit" variant="primary" className="mt-3">Salvar</Button>
+      </Form>
+    </Container>
+  );
+}
+
+export default NRs;

@@ -1,0 +1,40 @@
+
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Dt. Nascimento*:</Form.Label>
+              <Col md={10}><Form.Control type="date" name="birthDate" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Sexo:</Form.Label>
+              <Col md={10}>
+                <Form.Check type="radio" label="Masculino" name="gender" value="male" onChange={handleChange} />
+                <Form.Check type="radio" label="Feminino" name="gender" value="female" onChange={handleChange} />
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Telefone Pessoal*:</Form.Label>
+              <Col md={10}><Form.Control type="tel" name="phone" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Telefone Adicional:</Form.Label>
+              <Col md={10}><Form.Control type="tel" name="phone2" onChange={handleChange} /></Col>
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>DOCUMENTOS</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CPF*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="cpf" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CNPJ:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="cnpj" onChange={handleChange} /></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Matrícula:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="registration" onChange={handleChange} /></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Labe

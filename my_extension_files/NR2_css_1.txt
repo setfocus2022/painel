@@ -1,0 +1,37 @@
+--- FILENAME: NR2.css
+/* NR2.css */
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .clickable-row:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .user-selection-table th {
+    text-align: center;
+  }
+  
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #85BB32;
+    border-color: #85BB32;
+  }
+  
+  .pagination .page-link {
+    color: #85BB32;
+  }
+  
+  div > .btn {
+    margin-right: 25px; 
+  }
+
+.detail-cell {
+    width: 50%; /* Define o tamanho de cada célula como 50% da largura total da linha */
+}
+  

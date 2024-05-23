@@ -1,0 +1,57 @@
+--- FILENAME: GerenciamentoInstituicao.js
+import React, { useState, useEffect } from 'react';
+import { Table, Container, Pagination } from 'react-bootstrap';
+import axios from 'axios';
+import './NR2.css'; // Assuming the same CSS file is used for styling
+
+const GerenciamentoInstituicoes = () => {
+  const [instituicoes, setInstituicoes] = useState([]);
+  const [selectedInstituicao, setSelectedInstituicao] = useState(null);
+  const [detalhesInstituicao, setDetalhesInstituicao] = useState(null); // State for institution details
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+  const [isEditing, setIsEditing] = useState(false);
+
+    const handleEdit = () => {
+    setIsEditing(!isEditing);
+    };
+
+    const handleSave = (details) => {
+    // Send updated details to the server (to be implemented)
+    };
+
+    const handleChange = (field) => (event) => {
+    // Update the corresponding field with the new value (to be implemented)
+    };
+
+
+  useEffect(() => {
+    carregarInstituicoes();
+  }, []);
+
+  const carregarInstituicoes = () => {
+    axios.get('https://fair-ruby-caterpillar-wig.cyclic.app/instituicoes')
+      .then(response => {
+        setInstituicoes(response.data);
+      })
+      .catch(error => {
+        console.error("API Error:", error);
+      });
+  };
+
+  const carregarDetalhesInstituicao = (instituicaoId) => {
+    const fetchDetails = async (endpoint) => {
+      const response = await axios.get(`https://fair-ruby-caterpillar-wig.cyclic.app${endpoint}?instituicaoId=${instituicaoId}`);
+      return response.data;
+    };
+  
+    Promise.all([
+      fetchDetails('/instituicao-detalhes'),
+      fetchDetails('/cargos'),
+      fetchDetails('/contatos'),
+      fetchDetails('/setores'),
+      fetchDetails('/unidades'),
+      fetchDetails('/usuarios'),
+    ])
+    .then(([instituicoes, cargos, contatos, setores, unidades, usuarios]) => {
+      setDetalhesInstituicao({ instituicoes, cargos,

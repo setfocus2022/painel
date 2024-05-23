@@ -1,0 +1,30 @@
+(e) => setName(e.target.value)} />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  </Form.Group>
+                  <Button style={{ backgroundColor: '#85BB32' }} onClick={verifyUser}>Verificar</Button>
+                </>
+              ) : (
+                <>
+                  <Form.Group>
+                    <Form.Label>Senha</Form.Label>
+                    <Form.Control type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                  </Form.Group>
+                  <Button  style={{ backgroundColor: '#85BB32' }} onClick={registerPassword}>Cadastrar senha</Button>
+                </>
+              )}
+              {error && <Alert variant="danger" className="mt-3">{error}</Alert>}
+            </Form>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Container>
+   
+  );
+};
+
+
+export default PrimeiroAcesso;
+

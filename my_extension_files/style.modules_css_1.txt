@@ -1,0 +1,64 @@
+--- FILENAME: style.modules.css
+/* Adicione uma transição suave para os links do menu */
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+/* Mude a cor e o fundo do link ao passar o mouse */
+.nav-link:hover {
+  color: #4CAF50;
+  background-color: #f9f9f9;
+}
+
+/* Adicione uma animação de rotação ao ícone do menu ao passar o mouse */
+.nav-link:hover i {
+  transform: rotate(360deg);
+  transition: all 0.5s ease;
+}
+
+/* Adicione uma transição suave para os links do submenu */
+.submenu li a {
+  transition: all 0.3s ease;
+}
+
+/* Mude a cor e o fundo do link do submenu ao passar o mouse */
+.submenu li a:hover {
+  color: #4CAF50;
+  background-color: #f9f9f9;
+}
+
+/* Adicione uma animação de rotação ao ícone do submenu ao passar o mouse */
+.submenu li a:hover i {
+  transform: rotate(360deg);
+  transition: all 0.5s ease;
+}
+/* Estilo para o submenu quando está expandido */
+.submenu .collapse.show {
+  background-color: #f9f9f9; /* Cor de fundo quando o submenu está expandido */
+}
+
+/* Estilo para os links do submenu quando o submenu está expandido */
+.submenu .collapse.show a {
+  color: #333; /* Cor do texto quando o submenu está expandido */
+}
+
+/* Estilo para os links do submenu ao passar o mouse quando o submenu está expandido */
+.submenu .collapse.show a:hover {
+  color: #4CAF50; /* Cor do texto ao passar o mouse quando o submenu está expandido */
+  background-color: #f9f9f9; /* Cor de fundo ao passar o mouse quando o submenu está expandido */
+}
+/* Estilo para o submenu quando está expandido */
+.custom-submenu {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #333; /* Cor de fundo quando o submenu está expandido */
+}
+
+/* Estilo para os links do submenu quando o submenu está expandido */
+.custom-submenu a {
+  color: #f9f9f9; /* Cor do texto quando o submenu está expandido */
+}
+
+/* Estilo para os links do submenu ao passar o mouse quando o submenu está expandido */
+.custom-submenu a:hover {
+  color: #4CAF50; /* Cor

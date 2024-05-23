@@ -1,0 +1,12 @@
+     >
+                <span className="no-icon">Sair</span>
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default Header;

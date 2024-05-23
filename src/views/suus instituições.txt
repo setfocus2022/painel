@@ -1,0 +1,687 @@
+preciso criar uma pagina em react bootstrap para meu sistema de painel admnistrativo ( light bootstrap da creativetim ), a pagina que quero criar precisam ter 7 colunas com os seguintes nomes: IDENTIFICAÇÃO , ENDEREÇO, CONTATOS, UNIDADES, SETORES, CARGOS, USUÁRIOS. em IDENTIFICAÇÃO ele precisa ter os seguintes campos de formularios: INSTITUIÇÃO: (String) , CNPJ: (Precisa ser preenchido por um valor valido de CNPJ ), INSCRIÇÃO ESTADUAL: (string) e RAZÃO SOCIAL: ( String ). em ENDEREÇO ele precisa ter os seguintes campos de formularios: LOGRADOURO: , NÚMERO: , COMPLEMENTO: , BAIRRO: , CIDADE:, ESTADO: , PAÍS:, CEP: ( Se for fornecido um cep valido, deve preencher os demais campos com o endereço correspondente ). Em contatos a coluna precisa ter um text clicavel no canto direito da coluna escrito ADICIONAR, onde se o usuario clicar deve adicionar outra coluna dentro dessa coluna CONTATOS com os campos: CATEGORIA ( Opções: --SELECIONAR-- , Administrativo, Tecnico , Cobrança e Especifique.. , onde --SELECIONAR-- não deve ser valido para ser salvo e "Especifique.." deve pedir um input do usuario para que ele forneça uma string valida ) , esse botão ADICIONAR deve sempre adicionar dentro e no fim da Coluna CONTATOS uma nova coluna com esses campos que mencionei anteriormente e uma linha que ira separar os formularios caso o usuario adicione mais de uma coluna dentro de CONTATOS. Em UNIDADES ele precisa ter o seguinte campo de formulario: UNIDADE: , essa coluna UNIDADES deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna UNIDADES com outro campo UNIDADE, isso é devido caso o usuario queria adicionar mais unidades. Em SETORES ele precisa ter o seguinte campo de formulario: SETOR: , essa coluna SETROES deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna SETORES com outro campo SETOR, isso é devido caso o usuario queria adicionar mais setores. Em CARGOS ele precisa ter o seguinte campo de formulario: CARGO: , essa coluna CARGOS deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna CARGOS com outro campo CARGO, isso é devido caso o usuario queria adicionar mais cargos. Em USUÁRIOS ele precisa ter os seguintes campos de formulario: NOME: , IDENTIFICADOR: (deve ser preenchido por um CPF VALIDO ou um EMAIL valido ) essa coluna USUÁRIOS deve conter a mesma logica que CONTATOS com o texto clicavel ADICIONAR no canto direito da coluna, onde se o usuario clicar ele deve adicionar outra coluna dentro dessa coluna USUÁRIOS com outros campos NOME: e IDENTIFICADOR:, isso é devido caso o usuario queria adicionar mais usuarios. no fim deve conter um botão salvar onde ele deve chamar o meu endpoint "https://fair-ruby-caterpillar-wig.cyclic.app/nova-instituicao" , para mais detalhes desse meu endpoint estou anexando o arquivo Server.js que é o meu servidor NODE JS. esse é um exemplo de pagina react do meu projeto fazendo algumas importações : "import React, { useState , useEffect } from 'react';
+import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
+import './NovaInstituicao.scss';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+
+
+const NovaInstituicao = () => {
+}
+
+export default NovaInstituicao;"
+
+prompt : crie agora para essa coluna: em ENDEREÇO ele precisa ter os seguintes campos de formularios: LOGRADOURO: , NÚMERO: , COMPLEMENTO: , BAIRRO: , CIDADE:, ESTADO: , PAÍS:, CEP: ( Se for fornecido um cep valido, deve preencher os demais campos com o endereço correspondente ).
+
+
+
+import React, { useState , useEffect } from 'react';
+import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
+import './NovaInstituicao.scss';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { cpf, cnpj } from 'cpf-cnpj-validator'; 
+
+
+const NRs = () => {
+  const [importPath, setImportPath] = React.useState('');
+  const [sectors, setSectors] = useState([{ name: '' }]); // Corrigido
+  const [positions, setPositions] = useState([{ name: '' }]); // Corrigido
+  const [users, setUsers] = useState([{ name: '', identifier: '', status: 'Registrando' }]); // Corrigido
+  const [contacts, setContacts] = useState([{ name: '', phone: '', category: '' }]); // Corrigido
+  const [units, setUnits] = useState([{ name: '' }]); // Corrigido
+
+ 
+
+  function addUser() {
+    setFormData(prevState => ({
+      ...prevState,
+      users: [...prevState.users, { name: '', identifier: '', status: 'Registrando' }],
+    }));
+  }
+  
+  function removeUser(index) {
+    setUsers(users.filter((user, i) => i !== index));
+  }
+  
+  function handleUserChange(e, index, field) {
+    const newUsers = [...users];
+    newUsers[index][field] = e.target.value;
+    setUsers(newUsers);
+  }
+  
+
+  const handleSectorChange = (e, index) => {
+    const newSectors = [...sectors];
+    newSectors[index] = e.target.value;
+    setSectors(newSectors);
+  }
+  
+  const handlePositionChange = (e, index) => {
+    const newPositions = [...positions];
+    newPositions[index] = e.target.value;
+    setPositions(newPositions);
+  }
+  
+  const addSector = () => {
+    setSectors([...sectors, '']);
+  }
+  
+  const addPosition = () => {
+    setPositions([...positions, '']);
+  }
+  
+  const removeSector = (index) => {
+    const newSectors = [...sectors];
+    newSectors.splice(index, 1);
+    setSectors(newSectors);
+  }
+  
+  const removePosition = (index) => {
+    const newPositions = [...positions];
+    newPositions.splice(index, 1);
+    setPositions(newPositions);
+  }
+  
+  const handleImportChangeSectors = (e) => {
+    setImportPathSectors(e.target.value);
+  }
+  
+  const handleImportChangePositions = (e) => {
+    setImportPathPositions(e.target.value);
+  }
+  
+
+  const handleImportChange = (e) => {
+    setImportPath(e.target.value);
+  }
+  const [formData, setFormData] = useState({
+    instituicao: '',
+    cnpj: '',
+    inscricao_estadual: '',
+    razao_social: '',
+    logradouro: '',
+    numero: '',
+    complemento: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    cep: '',
+    contatos: [],
+    units: [],
+    sectors: [],
+    positions: [], // Adicionado
+    users: [],
+  });
+  
+
+  // Adicione uma nova unidade
+  const addUnit = () => {
+    setFormData(prevState => ({
+      ...prevState,
+      units: [...prevState.units, ''],
+    }));
+  };
+
+  // Remova uma unidade existente
+  const removeUnit = (indexToRemove) => {
+    setFormData(prevState => ({
+      ...prevState,
+      units: prevState.units.filter((_, index) => index !== indexToRemove),
+    }));
+  };
+
+  // Atualize uma unidade existente
+  const handleUnitChange = (e, index) => {
+    const { value } = e.target;
+
+    setFormData(prevState => {
+      const newUnits = [...prevState.units];
+      newUnits[index] = value;
+      return { ...prevState, units: newUnits };
+    });
+  };
+
+  const [categories, setCategories] = useState(["--SELECIONE--", "Administrativo", "Técnico", "Cobrança", "Especifique.."]);
+
+
+  const addContact = () => {
+    setFormData(prevState => ({
+      ...prevState,
+      contacts: [...prevState.contacts, { category: '', phone: '' }],
+    }));
+  };
+
+  
+  const handleContactChange = (e, index) => {
+    const { name, value } = e.target;
+    const newContacts = [...contacts];
+  
+    // Se não existe um objeto de contato neste índice, crie um
+    if (!newContacts[index]) {
+      newContacts[index] = {};
+    }
+
+    newContacts[index][name] = value;
+    setContacts(newContacts);
+
+    // Verificar se "--SELECIONE--" foi selecionado
+    if (value === '--SELECIONE--') {
+      alert('Por favor, selecione uma categoria.');
+      return; // Não faça nada se "--SELECIONE--" for selecionado
+    }
+  
+    // Adicionar nova categoria se a opção 'Especifique..' foi selecionada
+    if (name === 'category' && value === 'Especifique..') {
+      const newCategory = prompt('Por favor, especifique a nova categoria:');
+      if (newCategory) {
+        setCategories([...categories, newCategory]);
+        setFormData(prevState => {
+          const newContacts = [...prevState.contacts];
+          newContacts[index][name] = newCategory;
+          return { ...prevState, contacts: newContacts };
+        });
+      }
+    } else {
+      setFormData(prevState => {
+        const newContacts = [...prevState.contacts];
+        newContacts[index][name] = value;
+        return { ...prevState, contacts: newContacts };
+      });
+    }
+  };
+  
+  
+  
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+  
+    // Aqui removemos a validação de CPF e CNPJ porque isso será feito na função handleSubmit
+  
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  
+    if (name === 'zipCode') {
+      const cep = value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => {
+            const { logradouro, bairro, localidade, uf } = response.data;
+            setFormData(prevState => ({
+              ...prevState,
+              address: logradouro,
+              district: bairro,
+              city: localidade,
+              state: uf,
+            }));
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
+    }
+  };
+  
+
+  
+
+  const removeContact = (indexToRemove) => {
+    setFormData(prevState => ({
+      ...prevState,
+      contacts: prevState.contacts.filter((_, index) => index !== indexToRemove),
+    }));
+  };
+  
+
+  const handleCheckChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+
+  const estados = [
+    'Acre',
+    'Alagoas',
+    'Amapá',
+    'Amazonas',
+    'Bahia',
+    'Ceará',
+    'Distrito Federal',
+    'Espírito Santo',
+    'Goiás',
+    'Maranhão',
+    'Mato Grosso',
+    'Mato Grosso do Sul',
+    'Minas Gerais',
+    'Pará',
+    'Paraíba',
+    'Paraná',
+    'Pernambuco',
+    'Piauí',
+    'Rio de Janeiro',
+    'Rio Grande do Norte',
+    'Rio Grande do Sul',
+    'Rondônia',
+    'Roraima',
+    'Santa Catarina',
+    'São Paulo',
+    'Sergipe',
+    'Tocantins',
+  ];
+
+  
+  
+    
+  function isValidEmail(email) {
+    const regex = /^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$/;
+    return regex.test(email);
+  }
+    
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    // Extract the values from formData
+    let {
+      instituicao,
+      cnpj: cnpjValue,
+      inscricao_estadual,
+      razao_social,
+      logradouro,
+      numero,
+      complemento,
+      bairro,
+      cidade,
+      estado,
+      cep,
+      contatos,
+      unidades,
+      setores,
+      usuarios
+    } = formData;
+  
+    // Se "contatos" estiver indefinido, defina-o como um array vazio
+    contatos = contatos || [];
+  
+    // Se "unidades" estiver indefinido, defina-o como um array vazio
+    unidades = unidades || [];
+  
+    // Se "setores" estiver indefinido, defina-o como um array vazio
+    setores = setores || [];
+  
+    // Se "usuarios" estiver indefinido, defina-o como um array vazio
+    usuarios = usuarios || [];
+    const data = {
+      instituicao: {
+        id: '', // Se necessário
+        instituicao: instituicao,
+        cnpj: cnpjValue,
+        inscricao_estadual: inscricao_estadual,
+        razao_social: razao_social,
+        logradouro: logradouro,
+        numero: numero,
+        complemento: complemento,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado,
+        cep: cep,
+      },
+      contatos: contatos.map((contact) => ({
+        id: '', // Se necessário
+        instituicao_id: '', // Se necessário
+        categoria: contact.category,
+        nome_completo: contact.name,
+        telefone: contact.phone,
+      })),
+      unidades: unidades.map((unit) => ({
+        id: '', // Se necessário
+        instituicao_id: '', // Se necessário
+        nome: unit,
+      })),
+      setores: setores.map((setor) => ({
+        id: '', // Se necessário
+        unidade_id: '', // Se necessário
+        nome: setor,
+      })),
+      cargos: cargos.map((cargo) => ({
+        id: '', // Se necessário
+        setor_id: '', // Se necessário
+        nome: cargo,
+      })),
+      usuarios: usuarios.map((user) => ({
+        id: '', // Se necessário
+        cargo_id: '', // Se necessário
+        nome: user.name,
+        identificador: user.identifier,
+        telefone: user.phone, // Assumindo que o telefone é armazenado na propriedade 'phone'
+      })),
+    };
+  
+    try {
+      const response = await axios.post('https://fair-ruby-caterpillar-wig.cyclic.app/nova-instituicao', data);
+  
+      if (response.data.success) {
+        alert('Instituição criada com sucesso!');
+      } else {
+        alert('Erro ao criar instituição!');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Erro ao criar instituição!');
+    }
+  };
+  
+  return (
+    <Container>
+      <h2 style={{ fontSize: "27px", fontWeight: "bold", marginBottom: "20px" }}>Cadastro de Novos Usuários</h2>
+      <Form onSubmit={handleSubmit}> 
+        <Card>
+          <Card.Header>IDENTIFICAÇÃO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Instituição*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="instituicao" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CNPJ*:</Form.Label>
+            <Col md={10}><Form.Control type="text" name="cnpj" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Inscrição Estadual*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="inscricaoestadual" onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Razão Social*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="razaosocial" onChange={handleChange} required/></Col>
+            </Form.Group>
+            
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>ENDEREÇO</Card.Header>
+          <Card.Body>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Logradouro*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="address" value={formData.address} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Número*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="number" value={formData.number} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Complemento:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="complement" value={formData.complement} onChange={handleChange} /></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Bairro*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="district" value={formData.district} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Cidade*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="city" value={formData.city} onChange={handleChange} required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>Estado*:</Form.Label>
+              <Col md={10}>
+                <Form.Control as="select" name="state" value={formData.state} onChange={handleChange} required>
+                  <option value="">Selecione um estado</option>
+                  {estados.map(estado => (
+                    <option key={estado} value={estado}>{estado}</option>
+                  ))}
+                </Form.Control>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>País*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="country" value={formData.country} onChange={handleChange} disabled required/></Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column md={2}>CEP*:</Form.Label>
+              <Col md={10}><Form.Control type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required/></Col>
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>
+            CONTATOS
+            <span style={{ cursor: 'pointer', float: 'right' }} onClick={addContact}>ADICIONAR</span>
+          </Card.Header>
+          <Card.Body>
+          {formData.contacts.map((contact, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Categoria:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    as="select"
+                    name="category"
+                    value={contact.category}
+                    onChange={(e) => handleContactChange(e, index)}
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </Form.Control>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Nome Completo:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="name"
+                    value={contact.name || ''}
+                    onChange={(e) => handleContactChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Telefone:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="phone"
+                    value={contact.phone}
+                    onChange={(e) => handleContactChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeContact(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+          </Card.Body>
+        </Card>
+
+          
+        <Card>
+          <Card.Header>
+              UNIDADES
+              <span style={{ cursor: 'pointer', float: 'right' }} onClick={addUnit}>ADICIONAR</span>
+          </Card.Header>
+          <Card.Body>
+              {formData.units.map((unit, index) => (
+                  <div key={index}>
+                      <Form.Group as={Row}>
+                          <Form.Label column md={2}>Unidade:</Form.Label>
+                          <Col md={10}>
+                              <OverlayTrigger
+                                  placement="top"
+                                  delay={{ show: 250, hide: 400 }}
+                                  overlay={
+                                      <Tooltip id={`tooltip-top`}>
+                                          Adicione um item por linha. Registros duplicados ou linhas em branco serão ignorados automaticamente.
+                                      </Tooltip>
+                                  }
+                              >
+                                  <Form.Control 
+                                      type="text"
+                                      name="unit"
+                                      value={unit}
+                                      onChange={(e) => handleUnitChange(e, index)}
+                                  />
+                              </OverlayTrigger>
+                          </Col>
+                      </Form.Group>
+                      <Form.Group as={Row}>
+                          <Col md={{ offset: 2, span: 10 }}>
+                              <Button onClick={() => removeUnit(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                          </Col>
+                      </Form.Group>
+                      <hr />
+                  </div>
+              ))}
+              
+          </Card.Body>
+      </Card>
+
+
+
+        
+      <Card>
+        <Card.Header>
+          SETORES
+          <span style={{ cursor: 'pointer', float: 'right' }} onClick={addSector}>ADICIONAR</span>
+        </Card.Header>
+        <Card.Body>
+          {sectors.map((sector, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Setor:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    value={sector}
+                    onChange={(e) => handleSectorChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeSector(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+         
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>
+          CARGOS
+          <span style={{ cursor: 'pointer', float: 'right' }} onClick={addPosition}>ADICIONAR</span>
+        </Card.Header>
+        <Card.Body>
+          {positions.map((position, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Cargo:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    value={position}
+                    onChange={(e) => handlePositionChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removePosition(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+        
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>
+          USUÁRIOS
+          <span style={{ cursor: 'pointer', float: 'right', marginLeft: '25px' }} onClick={addUser}>ADICIONAR</span>
+          
+
+        </Card.Header>
+        <Card.Body>
+          {users.map((user, index) => (
+            <div key={index}>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Nome:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="name"
+                    value={user.name}
+                    onChange={(e) => handleUserChange(e, index, 'name')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Identificador:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="identifier"
+                    value={user.identifier}
+                    placeholder="CPF ou E-Mail"
+                    onChange={(e) => handleUserChange(e, index, 'identifier')}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeUser(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+        </Card.Body>
+      </Card>
+
+
+
+
+        <Button type="submit" variant="primary" className="mt-3">Salvar</Button>
+      </Form>
+    </Container>
+  );
+}
+
+export default NRs;
+
+poderia criar um formulario de cadastro de instituições em react? preciso que separe em colunas: Nova_Instituicao ( Colunas: instituicao, cnpj, inscricao_estadual, razao_social, logradouro, numero, complemento, bairro, cidade, estado, cep ) ; Contatos ( Colunas: categoria (--SELECIONE--; Administrativo; Cobrança; Tecnico; Especifique..), nome_completo e telefone ) ; Unidades ( Colunas: id, instituicao_id e nome ) ; Setores ( Colunas: id, instituicao_id e nome) ;  Cargos  ( Colunas: id, instituicao_id e nome) ; Usuarios ( Colunas: nome, identificador(CPF ou Email) e Telefone ).
+
+
+instituicao; cnpj; inscricaoEstadual ; razaoSocial; logradouro; numero; complemento; bairro; cidade; estado; pais; cep; CL: Instituicoes 
+
+categoria; categoriaEspecifica; nomeCompleto; telefone; CL: Contatos
+
+unidade; CL: Unidades
+setor; CL: Setores
+cargo; CL: Cargos
+nome; identificador; CL: Usuarios
+
+prompt : pronto, o formulario de registro de instituição esta funcionando perfeitamente. preciso que entenda o contexto do meu projeto, estou desenvolvendo um sistema de uma clinica que ira fornecer avaliação de psicossocial tanto para a propria instituição ( LIFEMED) quanto para outras empresas. Então no sistema agora temos cadastro de Novo Usuário ( cadastro de acesso, e associar esse usuario a uma instituição ), Gerenciar Usuário ( Tabela que retorna todas as informações do banco de dados relacionado aos usuarios cadatrados na pagina 'Novo Usuario', podendo modificar dados e ate excluir esses usuarios do banco de dados ) e Usuários ( que contem uma barra de pesquisa e uma tabela com todos os usuarios, vendo informações importates sobre o mesmo )
+
+
+prompt: otimo, funcionou. preciso agora criar a pagina de TodosProgramas.js. Essa pagina precisa ter o mesmo estilo de formulario que usamos anteriormente, deve conter como titulo "Criar Programa" e na coluna "Programa" deve conter 2 campos : 'Nome do Programa:' , 'Link do Form. :' , precisa que contenha uma logica muito importante, o "programa" a ser adicionado na verdade é uma avaliação psicossocial feita no zoho forms que o usuario ira criar, dentro de Prefill URL Builder ele pede 4 variaveis: Nome, Instituição, Date e CPF. ao inserir esses dados no Prefill URL Builder do zoho forms ele gera uma url referente ao formulario ( avaliação psicossocial ), por exemplo o link da avaliação que tenho é "https://forms.zohopublic.com/engenharia10qualityseg/form/AvaliaoPsicossocial/formperma/pcy-J3mEi5QFgYqlf_VwbVsFNplqFgFNvTE9v_hJWVg" e ao adicionar as informações das 4 variaveis que mencionei fica: "https://forms.zohopublic.com/engenharia10qualityseg/form/AvaliaoPsicossocial/formperma/pcy-J3mEi5QFgYqlf_VwbVsFNplqFgFNvTE9v_hJWVg?nome=Matheus%20Miguel%20Dos%20Santos&instituicao=Qualityseg%20Consultoria&data=08%2F08%2F2023&cpf=417.070.868-77". a logica da pagina 'programas' é que na pagina PainelUsuario.js deve aparecer uma coluna clicavel que  ira puxar esse link do zoho forms fornecido pelo usuario e deve incluir no final do link essas 4 variaveis ( Date deve puxar a data atual, exemplo: 08/08/2023 ) e redirecionar o usuario em uma nova aba.
+
+prompt teste: uma informação para contexto, quando o usuario estiver logado e na pagina PainelUsuario.js e clicar nessa coluna clicavel que redireciona ao formulario do zoho forms com as variaveis formatadas no link do form , essas variaveis devem ser puxadas da tabela 'cadastro_clientes' , verificar qual usuario esta logado no sistema pelo "nome:"
+
+prompt: vamos melhorar a logica dessa segunda parte, a função deve puxar os dados de "Name" , "CPF", "Instituição" da tabela 'cadastro_clientes' e a variavel Date deve puxar a data atual no formato , exemplo, '08/08/2023' e incluir no link do form. Crie o codigo da pagina PainelUsuario.js , ela deve conter o titulo grande "Seja Bem-Vindo(a) !" e abaixo um subtitulo medio "Avaliações Disponiveis:". a logica dessa pagina PainelUsuario é se o usuario logado tiver

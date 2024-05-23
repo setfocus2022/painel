@@ -1,0 +1,70 @@
+['']);
+
+  const handleAddUnidade = () => {
+    setUnidades([...unidades, '']);
+  };
+
+  const handleUnidadeChange = (e, index) => {
+    const updatedUnidades = [...unidades];
+    updatedUnidades[index] = e.target.value;
+    setUnidades(updatedUnidades);
+  };
+
+  const handleChange = (e, field, index = null) => {
+    const { name, value } = e.target;
+    
+    if (index !== null) { // Se estamos atualizando um contato
+      const updatedContatos = [...contatos];
+      updatedContatos[index][name] = value;
+      setContatos(updatedContatos);
+    } else { // Se estamos atualizando formData
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
+  };
+
+  
+  
+  const [endereco, setEndereco] = useState({
+    cep: '',
+    logradouro: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    pais: 'Brasil'
+  });
+
+  const handleChangeEndereco = (e) => {
+    const { name, value } = e.target;
+    setEndereco(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const estadosBrasileiros = [
+    { sigla: "", nome: "--SELECIONE--" },
+    { sigla: "AC", nome: "Acre" },
+    { sigla: "AL", nome: "Alagoas" },
+    { sigla: "AP", nome: "Amapá" },
+    { sigla: "AM", nome: "Amazonas" },
+    { sigla: "BA", nome: "Bahia" },
+    { sigla: "CE", nome: "Ceará" },
+    { sigla: "DF", nome: "Distrito Federal" },
+    { sigla: "ES", nome: "Espírito Santo" },
+    { sigla: "GO", nome: "Goiás" },
+    { sigla: "MA", nome: "Maranhão" },
+    { sigla: "MT", nome: "Mato Grosso" },
+    { sigla: "MS", nome: "Mato Grosso do Sul" },
+    { sigla: "MG", nome: "Minas Gerais" },
+    { sigla: "PA", nome: "Pará" },
+    { sigla: "PB", nome: "Paraíba" },
+    { sigla: "PR", nome: "Paraná" },
+    { sigla: "PE", nome: "Pernambuco" },
+    { sigla: "PI", nome: "Piauí" },
+    { sigla: "RJ", nome: "Rio de Janeiro" },
+    { sigla: "RN", nome: "Rio Grande do Norte" },
+    { sigla: "RS", nome: "Rio Grande do Sul" },
+    { si

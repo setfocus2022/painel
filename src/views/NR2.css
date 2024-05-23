@@ -1,0 +1,49 @@
+/* NR2.css */
+
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .clickable-row:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .user-selection-table th {
+    text-align: center;
+  }
+  
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #15283E;
+    border-color: #15283E;
+  }
+  
+  .pagination .page-link {
+    color: #15283E;
+  }
+  
+  div > .btn {
+    margin-right: 25px; 
+  }
+
+.detail-cell {
+    width: 50%; /* Define o tamanho de cada célula como 50% da largura total da linha */
+}
+  
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  

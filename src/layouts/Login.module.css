@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F0F0F0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.iconContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #f2f2f2;
+}
+
+.button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #15283E;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0D0E20;
+}
+
+/* Adicionando regras de media query para responsividade */
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 0.9em;
+  }
+
+  .icon {
+    width: 70%;
+    max-width: 150px;
+  }
+
+  .input {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .button {
+    padding: 10px;
+  }
+}
+

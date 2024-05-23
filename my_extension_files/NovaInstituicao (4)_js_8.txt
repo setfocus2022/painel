@@ -1,0 +1,54 @@
+e="category"
+                    value={contact.category}
+                    onChange={(e) => handleContactChange(e, index)}
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </Form.Control>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Nome Completo:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="name"
+                    value={contact.name || ''}
+                    onChange={(e) => handleContactChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column md={2}>Telefone:</Form.Label>
+                <Col md={10}>
+                  <Form.Control 
+                    type="text"
+                    name="phone"
+                    value={contact.phone}
+                    onChange={(e) => handleContactChange(e, index)}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Col md={{ offset: 2, span: 10 }}>
+                  <Button onClick={() => removeContact(index)} style={{ margin: '3px' }}>REMOVER</Button>
+                </Col>
+              </Form.Group>
+              <hr />
+            </div>
+          ))}
+          </Card.Body>
+        </Card>
+
+          
+        <Card>
+          <Card.Header>
+              UNIDADES
+              <span style={{ cursor: 'pointer', float: 'right' }} onClick={addUnit}>ADICIONAR</span>
+          </Card.Header>
+          <Card.Body>
+              {formData.units.map((unit, index) => (
+                  <div key={index}>
+                      <Form.Group as={Row}>
+                          <Form.Label

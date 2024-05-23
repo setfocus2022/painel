@@ -1,0 +1,120 @@
+tent: "\ea08"; }
+
+.nc-apple::before {
+  content: "\ea09"; }
+
+.nc-atom::before {
+  content: "\ea0a"; }
+
+.nc-attach-87::before {
+  content: "\ea0b"; }
+
+.nc-audio-92::before {
+  content: "\ea0c"; }
+
+.nc-backpack::before {
+  content: "\ea0d"; }
+
+.nc-badge::before {
+  content: "\ea0e"; }
+
+.nc-bag::before {
+  content: "\ea0f"; }
+
+.nc-bank::before {
+  content: "\ea10"; }
+
+.nc-battery-81::before {
+  content: "\ea11"; }
+
+.nc-bell-55::before {
+  content: "\ea12"; }
+
+.nc-bold::before {
+  content: "\ea13"; }
+
+.nc-bulb-63::before {
+  content: "\ea14"; }
+
+.nc-bullet-list-67::before {
+  content: "\ea15"; }
+
+.nc-bus-front-12::before {
+  content: "\ea16"; }
+
+.nc-button-pause::before {
+  content: "\ea17"; }
+
+.nc-button-play::before {
+  content: "\ea18"; }
+
+.nc-button-power::before {
+  content: "\ea19"; }
+
+.nc-camera-20::before {
+  content: "\ea1a"; }
+
+.nc-caps-small::before {
+  content: "\ea1b"; }
+
+.nc-cart-simple::before {
+  content: "\ea1c"; }
+
+.nc-cctv::before {
+  content: "\ea1d"; }
+
+.nc-chart-bar-32::before {
+  content: "\ea1e"; }
+
+.nc-chart-pie-35::before {
+  content: "\ea1f"; }
+
+.nc-chart-pie-36::before {
+  content: "\ea20"; }
+
+.nc-chart::before {
+  content: "\ea21"; }
+
+.nc-chat-round::before {
+  content: "\ea22"; }
+
+.nc-check-2::before {
+  content: "\ea23"; }
+
+.nc-circle-09::before {
+  content: "\ea24"; }
+
+.nc-circle::before {
+  content: "\ea25"; }
+
+.nc-cloud-download-93::before {
+  content: "\ea26"; }
+
+.nc-cloud-upload-94::before {
+  content: "\ea27"; }
+
+.nc-compass-05::before {
+  content: "\ea28"; }
+
+.nc-controller-modern::before {
+  content: "\ea29"; }
+
+.nc-credit-card::before {
+  content: "\ea2a"; }
+
+.nc-delivery-fast::before {
+  content: "\ea2b"; }
+
+.nc-email-83::before {
+  content: "\ea2c"; }
+
+.nc-email-85::before {
+  content: "\ea2d"; }
+
+.nc-explore-2::before {
+  content: "\ea2e"; }
+
+.nc-fav-remove::before {
+  content: "\ea2f"; }
+
+.nc-favourite-28::bef

@@ -1,0 +1,27 @@
+--- FILENAME: PainelUsuario.css
+.programa-coluna {
+    cursor: pointer;
+  }
+  
+  .programa-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave */
+  }
+  
+  .programa-card:hover {
+    transform: scale(1.05); /* Efeito de hover */
+  }
+  
+  .programa-card .card-title {
+    font-size: 18px; /* Tamanho do título */
+    font-weight: bold; /* Negrito */
+  }
+  
+  .programa-card .card-body {
+    font-size: 16px; /* Tamanho do corpo do texto */
+  }
+  

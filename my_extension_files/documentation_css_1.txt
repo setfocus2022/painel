@@ -1,0 +1,100 @@
+--- FILENAME: documentation.css
+/*!
+
+=========================================================
+* Light Bootstrap Dashboard React - v2.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+.tim-row {
+  padding-top: 60px;
+}
+pre.prettyprint {
+  background-color: #eee;
+  border: 0px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.atv,
+.str {
+  color: #05ae0e;
+}
+.tag,
+.pln,
+.kwd {
+  color: #3472f7;
+}
+.atn {
+  color: #2c93ff;
+}
+.pln {
+  color: #333;
+}
+.com {
+  color: #999;
+}
+.space-top {
+  margin-top: 50px;
+}
+.btn-primary .caret {
+  border-top-color: #3472f7;
+  color: #3472f7;
+}
+.area-line {
+  border: 1px solid #999;
+  border-left: 0;
+  border-right: 0;
+  color: #666;
+  display: block;
+  margin-top: 20px;
+  padding: 8px 0;
+  text-align: center;
+}
+.area-line a {
+  color: #666;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.logo-container .logo {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  width: 50px;
+  float: left;
+}
+.header-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.header-wrapper .navbar {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+.header-wrapper .header {
+  background-color: #ff8f5e;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.header-wrapper .header .filter::afte

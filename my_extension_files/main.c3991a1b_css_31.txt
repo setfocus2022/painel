@@ -1,0 +1,12 @@
+p Dashboard React - v2.0.0
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard-react
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(1turn)}}.alert,.brand,.btn-simple,.h1,.h2,.h3,.h4,.h5,.h6,.navbar,.td-name,a,body,button.close,h1,h2,h3,h4,h5,h6,p,td{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:Roboto,Helvetica Neue,Arial,sans-serif;font-weight:400}.h1,.h2,.h3,.h4,h1,h2,h3,h4{font-weight:300;margin:30px 0 15px}.h1,h1{font-size:52px}.h2,h2{font-size:36px}.h3,h3{font-size:28px;margin:20px 0 10px}.h4,h4{font-size:22px;line-height:30px}.h5,h5{font-size:16px;margin-bottom:15px}.h6,h6{font-size:14px;font-weight:600;text-transform:uppercase}p{font-size:16px;line-height:1.5}.h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{color:#9a9a9a;font-weight:300;line-height:1.5}h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small{font-size:60%}h1 .subtitle{display:block;margin:0 0 30px}.text-muted{color:#9a9a9a}.text-primary,.text-primary:hover{color:#1d62f0!important}.text-info,.text-info:hover{color:#1dc7ea!important}.text-success,.text-success:hover{color:#87cb16!important}.text-warning,.text-warning:hover{color:#ff9500!important}.text

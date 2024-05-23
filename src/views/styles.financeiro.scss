@@ -1,0 +1,90 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.custom-btn {
+  background-color: #FF7F00; // Cor de fundo laranja
+  color: white; // Cor do texto
+  font-weight: bold; // Texto em negrito
+  font-family: 'Montserrat', sans-serif; // Fonte Montserrat
+  border: none; // Remove a borda padrão do Bootstrap
+  width: 100%; // Largura máxima dentro do container pai
+  margin-bottom: 10px; // Espaçamento entre botões
+  margin-right: 250px;
+  &:hover {
+    background-color: darken(#FF7F00, 10%); // Escurece a cor ao passar o mouse
+    color: white;
+  }
+}
+
+.text-total {
+  color: white;
+  margin-top: 15px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-align: center;
+ 
+}
+
+// Estilização da coluna de informações para corresponder ao pedido
+.info-column {
+    background-color: #f2f2f2; // Cor de fundo cinza claro
+    border-radius: 15px; // Borda arredondada
+    padding: 20px; // Padding interno para o conteúdo
+    margin-top: 50px; // Distância acima da coluna
+    margin-left: 25px; // Distância da lateral esquerda
+    margin-right: 25px; // Distância da lateral direita
+    width: calc(100% - 50px); // Ajuste a largura subtraindo o espaço das margens
+    height: 500px; // Altura fixa definida
+    display: flex; // Habilita o uso de Flexbox para alinhamento interno
+    flex-direction: column; // Orienta os filhos da coluna verticalmente
+    justify-content: center; // Centraliza o conteúdo verticalmente
+    align-items: center; // Centraliza o conteúdo horizontalmente
+    overflow: auto; // Adiciona barra de rolagem se o conteúdo exceder a altura
+  }
+/* Estilização da barra de rolagem */
+.info-column::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  .info-column::-webkit-scrollbar-track {
+    background: #f2f2f2; /* Cor de fundo da trilha da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas para a trilha */
+  }
+  
+  .info-column::-webkit-scrollbar-thumb {
+    background: #b3b3b3; /* Cor da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas para a barra de rolagem */
+  }
+  
+  .info-column::-webkit-scrollbar-thumb:hover {
+    background: #999999; /* Cor da barra de rolagem ao passar o mouse */
+  }
+  .access-management-btn {
+    background-color: #FF7F00;
+    border-color: #FF7F00;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para telas menores que 768px */
+@media (max-width: 767.98px) {
+    .custom-btn {
+      font-size: 14px; /* Reduz o tamanho da fonte */
+      padding: 10px 5px; /* Ajusta o padding */
+      margin-right: 0;
+    }
+  
+    .info-column {
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px; /* Reduz o padding para economizar espaço */
+    }
+  }
+  

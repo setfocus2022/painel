@@ -1,0 +1,56 @@
+/* Estilos para a tabela */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  @media screen and (max-width: 600px) {
+    .table-container {
+      overflow-x: auto;
+    }
+  
+    .table {
+      width: 100%;
+    }
+  
+    .table th,
+    .table td {
+      white-space: nowrap;
+    }
+  
+    .table thead {
+      display: none;
+    }
+  
+    .table tbody tr {
+      display: block;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+  
+    .table tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 100px;
+    }
+  }
+  

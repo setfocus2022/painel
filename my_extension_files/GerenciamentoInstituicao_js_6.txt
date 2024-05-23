@@ -1,0 +1,50 @@
+= instituicoes.slice(indexOfFirstItem, indexOfLastItem);
+
+  return (
+    <Container fluid>
+      <h1>Gerenciador de Instituições</h1>
+      <p>Selecione a Instituição na tabela abaixo e vejas suas informações com opções de edição.</p>
+      <Table responsive bordered className="institution-selection-table mb-4">
+        <thead>
+          <tr>
+            <th>Selecione uma Instituição:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {currentItems.map((instituicao, index) => (
+            <tr key={index} onClick={() => handleInstituicaoSelection(indexOfFirstItem + index)} className="clickable-row">
+              <td>{instituicao.instituicao}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <div className="pagination-wrapper">
+        <Pagination>
+          {[...Array(totalPages).keys()].map(page => (
+            <Pagination.Item key={page + 1} active={page + 1 === currentPage} onClick={() => setCurrentPage(page + 1)}>
+              {page + 1}
+            </Pagination.Item>
+          ))}
+        </Pagination>
+      </div>
+      {selectedInstituicao && (
+        <div>
+          <h2>Detalhes da Instituição: {selectedInstituicao.instituicao}</h2>
+        {renderInstituicaoDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => handleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <h1>Contatos</h1>
+        {renderContatosDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => handleSave(instituicaoDetails)}>Salvar</button>
+        </div>
+
+        <h1>Unidades</h1>
+        {renderUnidadesDetails()}
+        <div className="edit-save-buttons">
+        <button onClick={() => handleEdit(instituicaoDetails)}>Editar</button>
+        <button onClick={() => han

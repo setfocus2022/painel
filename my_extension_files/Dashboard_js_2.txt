@@ -1,0 +1,59 @@
+</BootstrapCard.Body>
+          </BootstrapCard>
+        </Col>
+        <Col xs={12} md={6} className="mb-4">
+          <BootstrapCard className="card-btn card-stats h-100">
+            <BootstrapCard.Body>
+              <BootstrapCard.Title>Dispositivo Utilizado</BootstrapCard.Title>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Dispositivos</th>
+                    <th>Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mobile</td>
+                    <td>Placeholder</td>
+                  </tr>
+                  <tr>
+                    <td>Desktop</td>
+                    <td>Placeholder</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </BootstrapCard.Body>
+          </BootstrapCard>
+        </Col>
+        <Col xs={12} md={6} className="mb-4">
+          <BootstrapCard className="card-btn card-stats h-100">
+            <BootstrapCard.Body>
+              <BootstrapCard.Title>Browsers Utilizados</BootstrapCard.Title>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Browsers</th>
+                    <th>Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chrome</td>
+                    <td>Placeholder</td>
+                  </tr>
+                  <tr>
+                    <td>Firefox</td>
+                    <td>Placeholder</td>
+                  </tr>
+                  <tr>
+                    <td>Safari</td>
+                    <td>Placeholder</td>
+                  </tr>
+                  <tr>
+                    <td>Edge</td>
+                    <td>Placeholder</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </BootstrapCard.Bo

@@ -1,0 +1,161 @@
+/* PainelUsuario.css */
+
+.user-profile-row .programa-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaço entre os itens, mantendo o botão sempre no fundo */
+  width: 300px; /* Largura fixa para cada card */
+  height: auto; /* Altura automática para se ajustar ao conteúdo */
+  margin-bottom: 20px;
+  margin: 15px;
+}
+
+.programa-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Faz o conteúdo do card ocupar todo o espaço disponível */
+}
+
+.programa-card img {
+  width: 100%; /* Assegura que a imagem cubra toda a largura do card */
+  height: 100%x; /* Altura fixa para a imagem */
+  object-fit: cover; /* Faz com que a imagem preencha o espaço disponível sem distorcer */
+}
+
+.programa-card .card-title {
+  font-size: 18px; /* Tamanho do título */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.programa-card .card-text-container {
+  flex-grow: 1; /* Faz a descrição ocupar todo o espaço vertical disponível */
+  overflow-y: auto; /* Mostra a barra de rolagem vertical se necessário */
+  margin: 0 10px 15px 10px; /* Margens ao redor da descrição */
+  height: 100px; /* Altura fixa para a descrição */
+}
+
+/* Estiliza a barra de rolagem (apenas para Webkit browsers) */
+.programa-card .card-text-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.programa-card .card-text-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.img-catalogo {
+  width: 100%;
+}
+.back-inventario {
+  background-color: #69717A;
+  border-radius: 5px;
+}
+.back-aluno {
+  background-color: #1F1F1F;
+  border-radius: 5px;
+  padding: 15px;
+}
+.programa-card .courseButton  {
+  width: calc(100% - 20px); /* Faz o botão ocupar toda a largura do card menos o padding */
+  margin: 10px; /* Espaçamento ao redor do botão */
+  background-color: #15283E; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+
+.curso-concluido-certificado {
+  background-color: #f9f9f9; /* Cor de fundo suave para destacar */
+  border-left: 4px solid green; /* Barra lateral para destaque */
+  padding: 10px; /* Espaçamento interno */
+  margin: 10px 0; /* Margem acima e abaixo */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #333; /* Cor da fonte */
+}
+
+.kctdbutton  {
+  width: 50%; /* Faz o botão ocupar toda a largura do card menos o padding */
+  margin: 10px; /* Espaçamento ao redor do botão */
+  background-color: #15283E; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 0; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+  align-self: center;
+}
+.welcome-message {
+  text-align: center; /* Alinhar texto à esquerda */
+  font-family: 'Montserrat'; /* Mudar a fonte (exemplo com Arial) */
+  color: White;
+
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  background-color: #F7F7F8;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('search.png'); /* Adicione o caminho correto da sua imagem */
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* PainelUsuario.css */
+
+@media (max-width: 768px) {
+  .user-profile-row .programa-card {
+    width: 90%; /* Faz o card ocupar a maior parte da tela */
+    margin: 10px auto; /* Adiciona margem acima e abaixo, centraliza horizontalmente */
+  }
+
+  .user-profile-row {
+    justify-content: center; /* Centraliza os cards horizontalmente */
+  }
+
+  .profile-course-card img {
+    height: auto; /* Altura automática para manter a proporção da imagem */
+  }
+}
+
+  /* Estilos adicionais para melhorar a aparência em dispositivos móveis */
+  /* ... */

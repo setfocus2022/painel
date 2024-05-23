@@ -1,0 +1,427 @@
+
+
+/* src/Institucional.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  nav {
+    background-color: #15283E;
+    color: #fff;
+    padding: 1em 0;
+    margin-bottom: -25px;
+  }
+  header h1, header p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: #FF7F00;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Montserrat';
+    font-weight: bold;
+  }
+  .video-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* MantÃ©m a proporÃ§Ã£o do vÃ­deo */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  .chatbot-launcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%; /* Make the button round */
+    width: 60px; /* Adjust the size as needed */
+    height: 60px;
+    background-color: #FF7F00; /* Or any color you prefer */
+    cursor: pointer;
+  }
+  
+  .speech-bubble {
+    position: absolute;
+    top: -80px; /* Adjust the position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  nav ul li a:hover {
+    color: #ffffff; /* Cor ao passar o mouse e ao clicar */
+  }
+  
+  .promo-text {
+    font-family: 'Montserrat';
+    font-size: 15pt;
+  }
+  .nossos-cursos {
+    background-image: url('../images/cursos-background.png');
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .curso-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: inline-block;
+    padding: 50px 20px;
+    border-radius: 10px;
+  }
+  
+  .nossos-cursos h2, .nossos-cursos p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nossos-cursos a {
+    background: #FF7F00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: none; /* Opcional: remover se vocÃª preferir sombra no texto do botÃ£o */
+  }
+  
+  header {
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    background-size: cover; /* Garante que a imagem cubra o espaÃ§o disponÃ­vel */
+    background-position: top; /* Centraliza a imagem no elemento */
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  section {
+    
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+  }
+  
+  section p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+  
+  section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+  }
+  .sobre-nos-detalhes p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .sobre-nos-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+/* Estilos para o menu-wrapper e centralizaÃ§Ã£o do logo */
+.menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.logo-center img {
+    height: 50px; /* Ajuste conforme necessÃ¡rio para o logo */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #FF7F00;
+    text-decoration: none;
+    padding: 0 15px; /* Ajusta o espaÃ§amento horizontal dos links */
+    font-size: 1em; /* Ajuste conforme necessÃ¡rio */
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #ffffff; /* Cor ao passar o mouse e ao clicar */
+}
+
+  
+  .logo {
+    height: 50px; /* Ajuste conforme necessÃ¡rio */
+    margin-bottom: 25px; /* Garante espaÃ§o entre o logo e o botÃ£o de hambÃºrguer/menu */
+  }
+  
+
+  
+  /* Ajuste para quando o menu estiver aberto em dispositivos mÃ³veis */
+  @media (max-width: 768px) {
+    .menu-wrapper {
+      flex-direction: column;
+      margin-bottom: 5px;
+    }
+  
+    .logo {
+      margin-bottom: 20px; /* EspaÃ§o entre o logo e os links do menu em dispositivos mÃ³veis */
+  
+   
+    }
+  
+    .nav-links {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* EspaÃ§amento entre os links do menu em dispositivos mÃ³veis */
+    }
+  }
+  
+.logo-center {
+    text-align: center;
+    flex-grow: 1;
+    margin-right: 25px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* EstilizaÃ§Ã£o do botÃ£o de hambÃºrguer */
+.hamburger {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-text1 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 48pt;
+}
+
+/* Ajuste dos estilos do menu para telas mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Inicialmente escondido */
+        flex-direction: column;
+        width: 100%;
+        text-align: center; /* Centraliza os links */
+        margin-bottom: 15px;
+    }
+
+    .header-text1 {
+      font-family: 'Montserrat';
+      font-weight: bold;
+      font-size: 28pt;
+    }
+    .nav-links.open {
+        display: flex; /* Mostra o menu quando aberto */
+        
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adiciona espaÃ§o entre os links */
+    }
+}
+
+
+  .h2 {
+    color: #fff;
+    font-size: 25pt;
+    margin-top: -25px;
+  }
+  .sobre-nos-content, .texto-sobre-nos p {
+    color: #fff; /* Define a cor do texto para branco */
+  }
+  .sobre-nos-content h2 {
+    color: #fff;
+  }
+  @media screen and (max-width: 768px) {
+    .sobre-nos-content {
+      flex-direction: column;
+    }
+  
+    .texto-sobre-nos, .imagem-sobre-nos {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .texto-sobre-nos p {
+      margin-top: 20px;
+    }
+  }
+  footer {
+    background-color: #15283E;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.payment-icons {
+    margin-bottom: 10px;
+}
+
+.payment-icons img {
+    height: 40px; /* Ajuste conforme necessÃ¡rio */
+    margin: 0 10px;
+}
+
+/* Para garantir responsividade em dispositivos mÃ³veis */
+@media (max-width: 768px) {
+    .payment-icons img {
+        height: 30px; /* Menor para caber em telas menores */
+    }
+}
+
+  footer p {
+    margin: 0;
+  }
+  .card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.shadow {
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: #FF7F00;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100px; /* Ajuste conforme necessÃ¡rio */
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Estilos gerais para desktop */
+.metaverso-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #0F1D2E;
+    margin: 5px;
+    border-radius: 3px;
+    padding: 8px;
+    
+    border-color: white;
+    
+}
+
+.metaverso-card .text-side {
+    flex: 1;
+   
+}
+
+.text-side {
+  font-family: 'Montserrat';
+  margin-right: 55px;
+ 
+}
+.metaverso-card img {
+    max-width: 50%;
+    margin: 15px;
+    border-radius: 3px;
+}
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+    .metaverso-card {
+        flex-direction: column;
+    }
+
+    .metaverso-card img {
+        max-width: 98%;
+        margin: 0 10px 0 10px;
+      
+    }
+
+    /* Ajuste opcional para o texto para melhor leitura em dispositivos mÃ³veis */
+    .metaverso-card .text-side {
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column-reverse;
+      margin: 0;
+    }
+    
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  @media (min-width: 992px) { /* Para telas grandes, ajuste conforme necessÃ¡rio */
+    .video-responsive {
+      padding-top: 0;
+      width: 800px; /* Largura fixa para telas grandes */
+      height: 600px; /* Altura fixa para telas grandes */
+      margin: 0 auto; /* Centraliza o vÃ­deo */
+    }
+  }

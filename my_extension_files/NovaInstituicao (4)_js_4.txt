@@ -1,0 +1,93 @@
+setFormData(prevState => ({
+      ...prevState,
+      contacts: prevState.contacts.filter((_, index) => index !== indexToRemove),
+    }));
+  };
+  
+
+  const handleCheckChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+
+  const estados = [
+    'Acre',
+    'Alagoas',
+    'Amapá',
+    'Amazonas',
+    'Bahia',
+    'Ceará',
+    'Distrito Federal',
+    'Espírito Santo',
+    'Goiás',
+    'Maranhão',
+    'Mato Grosso',
+    'Mato Grosso do Sul',
+    'Minas Gerais',
+    'Pará',
+    'Paraíba',
+    'Paraná',
+    'Pernambuco',
+    'Piauí',
+    'Rio de Janeiro',
+    'Rio Grande do Norte',
+    'Rio Grande do Sul',
+    'Rondônia',
+    'Roraima',
+    'Santa Catarina',
+    'São Paulo',
+    'Sergipe',
+    'Tocantins',
+  ];
+
+  
+  
+    
+  function isValidEmail(email) {
+    const regex = /^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$/;
+    return regex.test(email);
+  }
+    
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    // Extract the values from formData
+    let {
+      instituicao,
+      cnpj: cnpjValue,
+      inscricao_estadual,
+      razao_social,
+      logradouro,
+      numero,
+      complemento,
+      bairro,
+      cidade,
+      estado,
+      cep,
+      contatos,
+      unidades,
+      setores,
+      usuarios
+    } = formData;
+  
+    // Se "contatos" estiver indefinido, defina-o como um array vazio
+    contatos = contatos || [];
+  
+    // Se "unidades" estiver indefinido, defina-o como um array vazio
+    unidades = unidades || [];
+  
+    // Se "setores" estiver indefinido, defina-o como um array vazio
+    setores = setores || [];
+  
+    // Se "usuarios" estiver indefinido, defina-o como um array vazio
+    usuarios = usuarios || [];
+    const data = {
+      instituicao: {
+        id: '', // Se necessário
+        instituicao: instituicao,
+        cnpj: cnpjValue,
+  

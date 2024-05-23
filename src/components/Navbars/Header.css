@@ -1,0 +1,27 @@
+.header-nav .navbar-brand {
+    font-size: 24px; /* Tamanho da fonte para desktop */
+}
+
+.header-nav .user-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border-radius: 50%; 
+}
+.custom-button {
+    background-color: rgba(62, 64, 149, 0.7); /* Cor de fundo transparente */
+    border: none; /* Remover borda padrão do botão */
+}
+  
+.navbar.custom-orange {
+    background-color: #15283E; /* Cor laranja desejada */
+  }
+  
+@media (max-width: 768px) {
+    .header-nav .navbar-brand {
+        font-size: 20px; /* Tamanho da fonte ajustado para mobile */
+    }
+
+  
+}

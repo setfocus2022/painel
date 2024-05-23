@@ -1,0 +1,21 @@
+tar recuperação de acesso:</Form.Label>
+              <Col sm={3} className="d-flex align-items-center">
+                <Form.Check type="checkbox" name="accessRecovery" inline onChange={handleCheckChange} />
+              </Col>
+            </Form.Group>
+          </Card.Body>
+        </Card>
+
+        {notification && (
+        <Alert variant={notification.type}>
+          {notification.message}
+        </Alert>
+        )}
+
+        <Button type="submit" variant="primary" className="mt-3" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Salvar</Button>
+      </Form>
+    </Container>
+  );
+}
+
+export default NRs;

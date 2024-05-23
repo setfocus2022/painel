@@ -1,0 +1,78 @@
+r .logo-tim {
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: block;
+    height: 61px;
+    width: 61px;
+    float: left;
+    overflow: hidden; }
+    .sidebar .logo-tim img {
+      width: 60px;
+      height: 60px; }
+  .sidebar .nav {
+    margin-top: 20px; }
+    .sidebar .nav li > a {
+      color: #FFFFFF;
+      margin: 5px 15px;
+      opacity: .86;
+      border-radius: 4px; }
+    .sidebar .nav li:hover > a,
+    .sidebar .nav li.open > a,
+    .sidebar .nav li.open > a:focus,
+    .sidebar .nav li.open > a:hover {
+      background: rgba(255, 255, 255, 0.13);
+      opacity: 1; }
+    .sidebar .nav li.active > a {
+      color: #FFFFFF;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.23); }
+    .sidebar .nav p {
+      margin: 0;
+      line-height: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase; }
+    .sidebar .nav .caret {
+      top: 24px;
+      position: absolute;
+      right: 15px; }
+    .sidebar .nav i {
+      font-size: 28px;
+      float: left;
+      margin-right: 15px;
+      line-height: 30px;
+      width: 30px;
+      text-align: center; }
+
+.sidebar .logo,
+body > .navbar-collapse .logo {
+  padding: 10px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .sidebar .logo p,
+  body > .navbar-collapse .logo p {
+    float: left;
+    font-size: 20px;
+    margin: 10px 10px;
+    color: #FFFFFF;
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .sidebar .logo .simple-text,
+  body > .navbar-collapse .logo .simple-text {
+    text-transform: uppercase;
+    padding: 5px 0px;
+    display: block;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 30px; }
+
+.sidebar .logo-tim,
+body > .navbar-collapse .logo-tim {
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: block;
+  height: 61px;
+  width: 61px;
+  float: left;
+  overflow: hidden; }
+  .sidebar .logo-tim i

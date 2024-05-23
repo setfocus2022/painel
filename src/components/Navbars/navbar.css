@@ -1,0 +1,15 @@
+
+.nustt {
+    background-color: #1F1F1F;
+    border: none;
+}
+.nustt2 {
+    background-color: #D9D9D9;
+}
+
+@media (max-width: 768px) {
+    .nustt {
+        background-color: #1F1F1F;
+       
+    }
+}

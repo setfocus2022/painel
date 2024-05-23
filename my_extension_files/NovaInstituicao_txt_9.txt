@@ -1,0 +1,60 @@
+                onClick={() => handleRemoveCargo(index)}
+                  className="mb-2"
+                >
+                  Remover
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button onClick={handleAddCargo} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Cargo</Button>
+        </Card.Body>
+      </Card>
+
+
+      <Card>
+        <Card.Header>USUÁRIOS</Card.Header>
+        <Card.Body>
+          {usuarios.map((usuario, index) => (
+            <div key={index} className="mb-4">
+              <Form.Group>
+                <Form.Label>Nome</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="nome"
+                  value={usuario.nome}
+                  onChange={(e) => handleUsuarioChange(e, index)}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Identificador (CPF ou E-Mail)</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="identificador"
+                  placeholder="CPF ou E-Mail"
+                  value={usuario.identificador}
+                  onChange={(e) => handleUsuarioChange(e, index)}
+                />
+              </Form.Group>
+              {usuarios.length > 1 && (
+                <Button 
+                  variant="danger" 
+                  onClick={() => handleRemoveUsuario(index)}
+                  className="mb-2"
+                >
+                  Remover
+                </Button>
+              )}
+            </div>
+          ))}
+          <Button onClick={handleAddUsuario} style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Adicionar Usuário</Button>
+        </Card.Body>
+      </Card>
+
+
+        <Button type="submit" style={{ backgroundColor: "#85BB32", borderColor: "#85BB32" }}>Registrar Instituição</Button>
+      </Form>
+    </Container>
+  );
+};
+
+export default Nova
