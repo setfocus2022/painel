@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext  } from 'react'; 
+import React, { useState, useEffect, useContext } from 'react';
 import { Badge, Button, Container, Row, Card, Modal } from 'react-bootstrap';
 import cursosData from './cursos.json';
 import axios from 'axios';
@@ -14,17 +14,24 @@ import { utcToZonedTime } from 'date-fns-tz';
 
 const PainelUsuario = () => {
   const { authState } = useContext(AuthContext);
-  const username = authState.username; // Acessando o username do contexto
-  const userId = authState.userId; // Acessando o userId do contexto
+  const username = authState.username;
+  const userId = authState.userId;
 
+  const iframeHtml = '<iframe title="ficha de EPI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOTcyZGZmNTctYTIxZC00MTZiLWE4MzQtMDdkYzgwMzE2Y2Y0IiwidCI6IjY0OGI0ZDE4LTJiMjgtNDY5Mi05OWU3LWEzYjVmMzlkZjg1NyJ9" frameborder="0" allowFullScreen="true"></iframe>';
 
   return (
-    <div >
-
-      <div className='back-aluno'><h1 className="welcome-message" style={{fontSize:'28pt'}}>Pagina Inicial</h1></div>
+    <div>
+      <div className='back-aluno'>
+        <h1 className="welcome-message" style={{ fontSize: '28pt' }}>
+          Pagina Inicial
+        </h1>
+      </div>
       <hr />
 
-     </div>
+      <div className="power-bi-container"> 
+      <div dangerouslySetInnerHTML={{ __html: iframeHtml }} />
+    </div>
+    </div>
   );
 };
 

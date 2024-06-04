@@ -22,6 +22,7 @@ const Dashboard = () => {
     dispatch(getCursosCadastradosCount());
   }, [dispatch]);
 
+  const iframeHtml = '<iframe title="ficha de EPI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOTcyZGZmNTctYTIxZC00MTZiLWE4MzQtMDdkYzgwMzE2Y2Y0IiwidCI6IjY0OGI0ZDE4LTJiMjgtNDY5Mi05OWU3LWEzYjVmMzlkZjg1NyJ9" frameborder="0" allowFullScreen="true"></iframe>';
 
 
 
@@ -41,7 +42,9 @@ const Dashboard = () => {
         </Col>
        
       </Row>
-      
+      <div className="power-bi-container"> 
+      <div dangerouslySetInnerHTML={{ __html: iframeHtml }} />
+    </div>
     </Container>
   );
 }
