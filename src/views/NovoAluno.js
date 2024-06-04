@@ -726,7 +726,7 @@ const AdicionarAlunos = () => {
       </Form.Group>
       <Form.Group>
         <h5>Username</h5>
-        <Form.Control type="text" name="username" value={editableUser.username} readOnly /> 
+        <Form.Control type="text" name="username" value={editableUser.username} onChange={handleInputChange}/> 
       </Form.Group>
       <Form.Group>
         <h5>Nome</h5>
